@@ -1,0 +1,63 @@
+/*ENCABEZADO*/
+header{
+    width: 100%;
+    background: #bfd200;
+    height: 90px;
+    /* la barra del menu sea fija*/
+    position: fixed;
+}
+
+.menu{
+    width: 80%;
+    height: 70px;
+    /*CENTARAR CAJA DE MENU*/
+    margin: auto;
+}
+/*pocisionamos el logo*/
+.logo{
+    width: 35%;
+    height: 70px;
+    float: left;
+    padding-top: 10px;
+    /*PARA QUE EL CONTENEDOR NO SE AGRANDE*/
+    box-sizing: border-box;
+}
+
+.logo p a {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*POSICIONAMSO EL MENU*/
+nav{
+    width: 65%;
+    height: 70px;
+    float: left;
+    text-align: right;
+    padding-top: 24px;
+/*PARA QUE EL CONTENEDOR NO SE AGRANDE*/
+    box-sizing: border-box;
+}
+
+nav ul li {
+    /*menu ponemos horizontal*/
+    display: inline;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+/*ESPACIOS ENTRE MENU*/
+    padding-left: 15px;
+    font-weight: bold;
+/*UN ESPACIO ENTRE LETRA*/
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover{
+    color: rgb(138, 138, 138);
+
+}
