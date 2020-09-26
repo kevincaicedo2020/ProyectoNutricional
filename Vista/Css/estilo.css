@@ -86,6 +86,11 @@ nav ul .ultimo a:last-child:hover{
     padding: 1rem;
     border: 2px solid #000000;   
 }
+
+.titulo{
+text-align: center;
+}
+
 .flex-contenedor {
     background-color: brown;
     padding: .5em 0;
@@ -112,4 +117,41 @@ nav ul .ultimo a:last-child:hover{
     font-size: 20px;
     text-align: center;
     margin: auto;
+}
+
+.trato{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 45px;
+}
+
+.doctores{
+    background: url(../Img/doctores.jpg);
+    width: 48%;
+    height: 75vh;
+    background-position: center;
+    background-size: cover;   
+}
+.ofreszco{
+    width: 49%;
+    margin: 0 auto;
+}
+
+.ofreszco h3{
+    text-align: center;
+}
+
+.retos{
+    width: 80%;
+    border: 2px solid #f77f00;
+    margin: 0 auto;
+}
+
+.retos h2{
+    text-align: center;
+}
+
+.retos p{
+    text-align: justify;
 }
