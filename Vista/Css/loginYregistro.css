@@ -1,0 +1,147 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+      font-size: 1.8rem;
+  }
+  img{
+      max-width: 100%;
+  }
+  /*Formulario y Login*/
+  .foto_registro{
+      background-image: url(../Img/comida.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .centar_contenido{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 50vh;
+      width: 50%;
+  }
+  .input_campo{
+    background: transparent;
+    border: none;
+  }
+  .texto_lista{
+    font-size: 4.5rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Gayathri', sans-serif;
+}
+  .texto{
+      color: #ffffff;
+      letter-spacing: 6px;
+      margin-bottom: 2rem;
+  }
+  .formulario{
+      height: 100%;
+  }
+  .formulario form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .campo{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2.5rem;
+  }
+  .campo_user{
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0 auto;
+      width: 70%;
+  }
+  .icon_user{
+      text-align: center;
+      border-radius: 5px;
+      padding: 2rem 4rem;
+      width: 30%;
+  }
+  .iconos{
+      font-size: 7rem;
+      color: #ffffff;
+      cursor: pointer;
+  }
+  .iconos:hover{
+      color: #34F211;
+  }
+  .hola1,.hola2{
+      display: none;
+      font-size: 4rem;
+      color: #2AC10F;
+  }
+  #nutricionista:checked ~ .hola1{
+    display: flex;
+  }
+  #paciente:checked ~ .hola2{
+    display: flex;
+  }
+  .icon_user{
+    display: flex;
+    align-items: center;
+  }
+  .icon_user input{
+      display: none;
+  }
+  .icon{
+    flex: 0 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .campo_lista{
+    flex: 0 0 90%;
+  }
+  .icono{
+      color: #ffffff;
+      font-size: 4rem;
+  }
+  .icono:hover{
+      color: #34F211;
+  }
+  .input_campo{
+      height: 6rem;
+      width: 100%;
+      text-align: center;
+      color: #011627;
+      font-size: 2.3rem;
+  }
+  .input_campo::placeholder{
+      color: #ffffff;
+      font-size: 2.3rem;
+      text-transform: uppercase;
+  }
+  .submit{
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+  }
+  .input_submit{
+      display: inline-block;
+      width: 100%;
+      padding: 1rem 0;
+      border: 0;
+      border-radius: 0.5rem;
+      font-size: 2.1rem;
+      cursor: pointer;
+      background-color: #ffffff;
+  }
+  .input_submit:hover{
+      background-color: #2AC10F;
+      color: #d9d9d9;
+  }
