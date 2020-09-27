@@ -90,7 +90,7 @@ nav ul .ultimo a:last-child:hover{
 .titulo{
 text-align: center;
 }
-
+/**********************************************/
 .flex-contenedor {
     background-color: brown;
     padding: .5em 0;
@@ -107,7 +107,7 @@ text-align: center;
     text-align: center;
     background-color: rgb(243, 220, 13);
 }
-
+/**********************************************/
 .mision h2{
     text-align: center;
     font-size: 35px;
@@ -118,7 +118,7 @@ text-align: center;
     text-align: center;
     margin: auto;
 }
-
+/**********************************************/
 .trato{
     width: 100%;
     display: flex;
@@ -142,6 +142,7 @@ text-align: center;
     text-align: center;
 }
 
+/**********************************************/
 .retos{
     width: 80%;
     border: 2px solid #f77f00;
@@ -155,3 +156,61 @@ text-align: center;
 .retos p{
     text-align: justify;
 }
+/**********************************************/
+.cuadro-op{
+    width: 80%;
+    border: 2px solid #f77f00;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-top: 40px;
+}
+.cuadro{
+    width: 30%;
+    border: 2px solid #bfd200;
+    margin: auto;
+    text-align: center;
+}
+
+.cuadro i{
+    margin: 0 40%;
+    padding-top: 10px;
+}
+.cuadro button{
+    padding: 10px 10px;
+    margin: 15px 0;
+}
+
+/***************************************************/
+.contactame{
+    background: url(../Img/cotactame.jpg);
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;  
+    margin-top: 30px;
+}
+.conte-contactame{
+    width: 100%;
+    height: 60vh;
+    background-color: #ffffff7c;
+    position: absolute;
+    margin: 65px 0;
+}
+
+.conte-contactame p {
+    width: 50%;
+    border:2px  solid  #bfd200;
+    text-align: center;
+    margin: 1.3em 5em;
+    font-size: 3.4em;
+}
+
+.bu-contacto{
+    margin: 0 35em;
+    padding: 10px 40px;
+}
+
+/**************************************************/
+
+
