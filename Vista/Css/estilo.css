@@ -1,7 +1,13 @@
+body{
+    width: 100%;
+    overflow-x: hidden;
+    background: #ededf0;
+}
+
 /*ENCABEZADO*/
 header{
     width: 100%;
-    background: #bfd200;
+    background: #faa307;
     height: 90px;
     /* la barra del menu sea fija*/
     position: fixed;
@@ -26,6 +32,7 @@ header{
     font-size: 25px;
     text-decoration: none;
     font-weight: bold;
+    color:  #ffffff;
 }
 
 /******************POSICIONAMSO EL MENU******************/
@@ -45,7 +52,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
@@ -57,19 +64,20 @@ nav ul li a {
 }
 
 nav ul li a:hover{
-    color: rgb(138, 138, 138);
+    color: #d00000;
 
 }
 nav ul .ultimo a{
-    padding: 8px;
+    padding: 8px 17px;
 }
 nav ul .ultimo a:last-child{
-    border: 2px solid #000000;
+    border: 2px solid #dc2f02;
     color: #ffffff;
 }
 nav ul .ultimo a:last-child:hover{
-    background: #f77f00;
+    background: #e85d04;
     color: #000000;
+    font-size: 17px;
 }
 /******** IMAGEN EN EL ENCABEZADO ************/
 .bg-fondo{
@@ -83,16 +91,22 @@ nav ul .ultimo a:last-child:hover{
 .main{
     width: 90%;
     margin: 0 auto;
-    padding: 1rem;
-    border: 2px solid #000000;   
+    padding: 1rem;  
 }
 
 .titulo{
 text-align: center;
 }
+
+.titulo h2{
+    font-size: 40px;
+}
+
+.titulo p {
+    font-size: 25px;
+}
 /**********************************************/
 .flex-contenedor {
-    background-color: brown;
     padding: .5em 0;
     display: flex;
     flex-wrap: wrap;
@@ -103,18 +117,21 @@ text-align: center;
 .items {
     width: 28.22222%;
     margin: .5em auto;
+    padding-top: 10px;
     line-height: 30px;
     text-align: center;
-    background-color: rgb(243, 220, 13);
+    background-color: #ffffff;
 }
 /**********************************************/
 .mision h2{
     text-align: center;
-    font-size: 35px;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding-top: 40px;
 }
 .mision .parrafo{
-    width: 55%;
-    font-size: 20px;
+    width: 60%;
+    font-size: 25px;
     text-align: center;
     margin: auto;
 }
@@ -137,29 +154,31 @@ text-align: center;
     width: 49%;
     margin: 0 auto;
 }
-
 .ofreszco h3{
+    text-transform: uppercase;
+    font-size: 28px;
     text-align: center;
 }
 
 /**********************************************/
 .retos{
     width: 80%;
-    border: 2px solid #f77f00;
-    margin: 0 auto;
+    margin: 45px auto;
 }
 
 .retos h2{
     text-align: center;
+    font-size: 33px;
 }
 
 .retos p{
     text-align: justify;
+    font-size: 18px;
+    line-height: 30px;
 }
 /**********************************************/
 .cuadro-op{
     width: 80%;
-    border: 2px solid #f77f00;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -167,9 +186,13 @@ text-align: center;
 }
 .cuadro{
     width: 30%;
-    border: 2px solid #bfd200;
+    border: 2px solid #fb5607;
     margin: auto;
     text-align: center;
+}
+
+.cuadro:hover{
+    background: #faa307;
 }
 
 .cuadro i{
@@ -179,7 +202,17 @@ text-align: center;
 .cuadro button{
     padding: 10px 10px;
     margin: 15px 0;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color:  #4ea8de;
 }
+
+.cuadro button:hover{
+    background: #ffffff;
+}
+
+
 
 /***************************************************/
 .contactame{
@@ -212,5 +245,13 @@ text-align: center;
 }
 
 /**************************************************/
-
+footer{
+    width: 100%;
+    height: 3em;
+    background: #faa307;
+    border: 2px solid #000000;
+}
+footer p {
+    text-align: center;
+}
 
