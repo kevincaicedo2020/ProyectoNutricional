@@ -3,7 +3,9 @@ body{
     overflow-x: hidden;
     background: #ededf0;
 }
-
+p{
+    font-family: 'Lato', sans-serif;
+}
 /*ENCABEZADO*/
 header{
     width: 100%;
@@ -34,6 +36,7 @@ header{
     text-decoration: none;
     font-weight: bold;
     color:  #ffffff;
+    font-family: 'Pacifico', cursive;
 }
 
 /******************POSICIONAMSO EL MENU******************/
@@ -86,14 +89,15 @@ nav ul .ultimo a:last-child:hover{
     background-position: center;
     background-size: cover;   
 }
+
+
 .frase{
-    width: 60%;
-    height: 80px;
-    border: 2px solid #d00000;
+    width: 50%;
     margin: 0 auto;
     text-align: center;
-   position: relative;
-   padding-top: 100px;
+    padding-top: 20%;
+    font-size: 55px;
+    font-family: 'Pacifico', cursive;
 }
 
 /**********************   SECCION MAIN      *****************************/
@@ -113,6 +117,7 @@ text-align: center;
 
 .titulo p {
     font-size: 25px;
+    font-family: 'Belleza', sans-serif;
 }
 /**********************************************/
 .flex-contenedor {
@@ -137,6 +142,7 @@ text-align: center;
     font-size: 30px;
     text-transform: uppercase;
     padding-top: 40px;
+    font-family: 'Belleza', sans-serif;
 }
 .mision .parrafo{
     width: 60%;
@@ -167,6 +173,7 @@ text-align: center;
     text-transform: uppercase;
     font-size: 28px;
     text-align: center;
+    font-family: 'Belleza', sans-serif;
 }
 
 /**********************************************/
@@ -178,6 +185,7 @@ text-align: center;
 .retos h2{
     text-align: center;
     font-size: 33px;
+    font-family: 'Belleza', sans-serif;
 }
 
 .retos p{
@@ -245,6 +253,7 @@ text-align: center;
     text-align: center;
     margin: 1.3em 5em;
     font-size: 3.3em;
+    font-family: 'Belleza', sans-serif;
 }
 
 .bu-contacto{
@@ -264,10 +273,32 @@ footer{
     width: 100%;
     height: 7em;
     background: #e85b04e8;
-    border: 2px solid #000000;
     margin-top: 40px;
 }
 footer p {
     text-align: center;
 }
+
+/************************************      SERVICIOS        ***********************************************************/
+/*********   imagen de head  *********/
+.bg-fondo2{
+    background: url(../Img/manzana.jpg);
+    width: 100%;
+    height: 95vh;
+    background-position: center;
+    background-size: cover;   
+}
+
+
+.frase2{
+    width: 50%;
+
+    margin: 0 -15%;
+    padding: 20%;
+    text-align: center;
+    font-size: 55px;
+    font-family: 'Pacifico', cursive;
+}
+
+
 
