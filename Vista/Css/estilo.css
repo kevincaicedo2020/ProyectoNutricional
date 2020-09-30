@@ -11,6 +11,7 @@ header{
     height: 90px;
     /* la barra del menu sea fija*/
     position: fixed;
+    z-index: 10;
 }
 
 .menu{
@@ -57,7 +58,7 @@ nav ul li a {
     text-decoration: none;
     text-transform: uppercase;
 /*ESPACIOS ENTRE MENU*/
-    padding-left: 15px;
+    padding-left: 16px;
     font-weight: bold;
 /*UN ESPACIO ENTRE LETRA*/
     letter-spacing: 1px;
@@ -65,28 +66,36 @@ nav ul li a {
 
 nav ul li a:hover{
     color: #d00000;
-
 }
-nav ul .ultimo a{
-    padding: 8px 17px;
+ .ultimo a{
+    padding: 12px 18px;
+    background: #e85d04;
 }
 nav ul .ultimo a:last-child{
-    border: 2px solid #dc2f02;
+    border-radius: 25px;
     color: #ffffff;
 }
 nav ul .ultimo a:last-child:hover{
-    background: #e85d04;
     color: #000000;
-    font-size: 17px;
 }
 /******** IMAGEN EN EL ENCABEZADO ************/
 .bg-fondo{
     background: url(../Img/encabezado.jpg);
     width: 100%;
     height: 100vh;
-    background-position: top-center;
-    background-size: cover;    
+    background-position: center;
+    background-size: cover;   
 }
+.frase{
+    width: 60%;
+    height: 80px;
+    border: 2px solid #d00000;
+    margin: 0 auto;
+    text-align: center;
+   position: relative;
+   padding-top: 100px;
+}
+
 /**********************   SECCION MAIN      *****************************/
 .main{
     width: 90%;
@@ -224,7 +233,7 @@ text-align: center;
     margin-top: 30px;
 }
 .conte-contactame{
-    width: 100%;
+    width: 90%;
     height: 60vh;
     background-color: #ffffff7c;
     position: absolute;
@@ -232,24 +241,31 @@ text-align: center;
 }
 
 .conte-contactame p {
-    width: 50%;
-    border:2px  solid  #bfd200;
+    width: 65%;
     text-align: center;
     margin: 1.3em 5em;
-    font-size: 3.4em;
+    font-size: 3.3em;
 }
 
 .bu-contacto{
-    margin: 0 35em;
-    padding: 10px 40px;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 60px;
+    border: 2px solid #faa307;
+    background-color:  #ffffff7c;
+    font-size: 20px;
 }
 
+.bu-contacto:hover{
+    background-color: #fb5407cb;
+}
 /**************************************************/
 footer{
     width: 100%;
-    height: 3em;
-    background: #faa307;
+    height: 7em;
+    background: #e85b04e8;
     border: 2px solid #000000;
+    margin-top: 40px;
 }
 footer p {
     text-align: center;
