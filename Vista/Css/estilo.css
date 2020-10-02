@@ -300,5 +300,36 @@ footer p {
     font-family: 'Pacifico', cursive;
 }
 
+/***************************   MAIN-PLANES             **********************************/
+.main-planes{
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid #000000;
+}
+
+.main-planes h2{
+    text-align: center;
+}
+
+.main-planes .centro {
+    text-align: center;
+}
+
+.planes{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag{
+   width: 35.333%;
+   margin: 20px auto;
+   padding: 20px 10px;
+   text-align: justify;
+ 
+   border: 2px solid #d00000;
+}
+
 
 
