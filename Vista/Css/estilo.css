@@ -9,7 +9,7 @@ p{
 /*ENCABEZADO*/
 header{
     width: 100%;
-    background: #faa307;
+    background: #80b918;
     height: 90px;
     /* la barra del menu sea fija*/
     position: fixed;
@@ -203,13 +203,13 @@ text-align: center;
 }
 .cuadro{
     width: 30%;
-    border: 2px solid #fb5607;
+    border: 2px solid #2b9348;
     margin: auto;
     text-align: center;
 }
 
 .cuadro:hover{
-    background: #faa307;
+    background: #aacc00;
 }
 
 .cuadro i{
@@ -222,14 +222,16 @@ text-align: center;
     border-radius: 25px;
     text-decoration: none;
     font-size: 17px;
-    background-color:  #4ea8de;
+    background-color:  #e85d04;
 }
 
+.cuadro button a{
+    text-decoration: none;
+    color: #000;
+}
 .cuadro button:hover{
     background: #ffffff;
 }
-
-
 
 /***************************************************/
 .contactame{
@@ -268,16 +270,6 @@ text-align: center;
 .bu-contacto:hover{
     background-color: #fb5407cb;
 }
-/**************************************************/
-footer{
-    width: 100%;
-    height: 7em;
-    background: #e85b04e8;
-    margin-top: 40px;
-}
-footer p {
-    text-align: center;
-}
 
 /************************************      SERVICIOS        ***********************************************************/
 /*********   imagen de head  *********/
@@ -289,10 +281,8 @@ footer p {
     background-size: cover;   
 }
 
-
 .frase2{
     width: 50%;
-
     margin: 0 -15%;
     padding: 20%;
     text-align: center;
@@ -300,19 +290,20 @@ footer p {
     font-family: 'Pacifico', cursive;
 }
 
-/***************************   MAIN-PLANES             **********************************/
+/***************************   MAIN-PLANES        **********************************/
 .main-planes{
     width: 90%;
     margin: 0 auto;
-    border: 2px solid #000000;
 }
 
 .main-planes h2{
     text-align: center;
+    font-size: 2.2em;
 }
 
 .main-planes .centro {
     text-align: center;
+    font-size: 20px;
 }
 
 .planes{
@@ -320,6 +311,7 @@ footer p {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+   
 }
 
 .tag{
@@ -327,9 +319,93 @@ footer p {
    margin: 20px auto;
    padding: 20px 10px;
    text-align: justify;
- 
-   border: 2px solid #d00000;
+   border: 3px solid #2b9348;
+}
+
+.tag h3{
+    font-family: 'Belleza', sans-serif;
+}
+
+.tag p{
+    line-height: 23px;
+}
+
+.tag:hover{
+    background: #fff;
+    font-weight: bold;
+}
+
+/****************      ACORDION           *************************/
+.semana h2{
+    font-family: 'Belleza', sans-serif;
+}
+
+#box {
+    width: 100%;
+    float: left;
+    margin-top: 40px;
+    clear: both;
+}
+
+#acordion {
+    margin-top: 20px;
+}
+
+  /**************    FOOTER    *******************************/
+.footer {
+    background-color: #84be17;
+}
+
+footer {
+    text-align: center;
+    padding: 50px 0;
+}
+
+footer p {
+    color: #fff;
+    font-family: 'Belleza', sans-serif;
+    font-size: 24px;
+}
+
+.menu-social {
+    margin-bottom: 25px;
+}
+
+.redes-sociales {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.redes-sociales li {
+    display: inline-block;
+}
+
+.redes-sociales a {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #3bbec0;
+    color: #fff;
+}
+
+.redes-sociales .social-facebook a {
+    background: #2d4ddb;
+}
+
+.redes-sociales .social-twitter a {
+    background: #1cdb15;
+}
+
+.redes-sociales .social-instagran a {
+    background: #e6520e;
 }
 
 
 
+footer .menu-social ul.redes-sociales li a {
+    margin: 0 5px;
+}
