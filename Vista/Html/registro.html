@@ -6,12 +6,12 @@
     <title>registro</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Css/loginYregistro.css">
+    <link rel="stylesheet" href="../Css/loginYregistrop.css">
 </head>
 <body>
     
     <div class="foto_registro">
-        <div class="centar_contenido">
+        <div class="centar_contenido cuadro_extra">
             <div class="texto">
                 <h2 class="texto_lista">REGISTRO DE PACIENTE</h2>
             </div>
@@ -22,45 +22,49 @@
                     <i class="fas fa-user-edit icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="text" class="input_campo" name="nombre" placeholder="Ingresa tu nombre" >
+                    <input type="text" class="input_campo" name="nombre" placeholder="Ingresa tu nombre" required>
                     <hr>
                 </div>
             </div>
-
-            <div class="campo">
-                <div class="icon">
-                    <i class="fas fa-user-tag icono"></i>
-                </div>
-                <div class="campo_lista">
-                    <input type="text" class="input_campo" name="apellido" placeholder="Ingresa tu apellido" >
-                    <hr>
-                </div>
-            </div>
-
             <div class="campo">
                 <div class="icon">
                     <i class="fas fa-envelope icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="email" class="input_campo" name="email" placeholder="Ingresa tu email" >
+                    <input type="email" class="input_campo" name="email" placeholder="Ingresa tu email" required>
+                    <hr>
+                </div>
+            </div>    
+            <div class="campo">
+                <div class="icon">
+                    <i class="far fa-calendar-alt icono"></i>
+                </div>
+                <div class="campo_lista">
+                    <input type="date" class="input_campo" name="fechaNacimiento" required>
                     <hr>
                 </div>
             </div>
-
+            <div class="campo">
+                <div class="icon">
+                    <i class="fas fa-mobile-alt icono"></i>
+                </div>
+                <div class="campo_lista">
+                    <input type="tel" class="input_campo" name="telefono" placeholder="Ingrese su celular" pattern="[0-9]{10}" required>
+                    <hr>
+                </div>
+            </div>
             <div class="campo">
                 <div class="icon">
                     <i class="fas fa-lock icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="password" class="input_campo" name="contrasena" placeholder="Ingresa tu contraseña" >
+                    <input type="password" class="input_campo" name="contrasena" placeholder="Ingresa tu contraseña" minlength="6" required>
                     <hr>
                 </div>
             </div>
-
             <div class="submit">
                 <input type="submit" class="input_submit" value="ENVIAR">
             </div>
-            
         </form>
     </div>
         </div>

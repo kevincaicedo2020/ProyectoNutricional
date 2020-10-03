@@ -14,7 +14,7 @@ html {
       max-width: 100%;
   }
   /*Formulario y Login*/
-  .foto_registro{
+  .foto_login{
       background-image: url(../Img/comida.jpg);
       background-position: center;
       background-size: cover;
@@ -24,6 +24,16 @@ html {
       justify-content: center;
       align-items: center;
   }
+  .foto_registro{
+    background-image: url(../Img/registro_paciente.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
   .centar_contenido{
       display: flex;
       flex-direction: column;
@@ -144,4 +154,11 @@ html {
   .input_submit:hover{
       background-color: #2AC10F;
       color: #d9d9d9;
+  }
+  .cuadro_extra{
+      background-color: rgba(73,80,87);
+      height: 90%;
+      border-radius: 5px;
+      margin-right: 3rem;
+      padding: 1.5rem;
   }
