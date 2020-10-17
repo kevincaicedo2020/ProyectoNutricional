@@ -83,7 +83,7 @@ nav ul .ultimo a:last-child:hover{
 }
 /******** IMAGEN EN EL ENCABEZADO ************/
 .bg-fondo{
-    background: url(../Img/encabezado.jpg);
+    background: url(../Img/hola2.jpg);
     width: 100%;
     height: 100vh;
     background-position: center;
@@ -409,3 +409,4 @@ footer p {
 footer .menu-social ul.redes-sociales li a {
     margin: 0 5px;
 }
+
