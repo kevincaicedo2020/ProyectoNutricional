@@ -102,22 +102,32 @@ a:hover {
     margin: 0 30%;
     font-size: 25px;
     font-weight: bold;
+    font-family: 'Belleza', sans-serif;
 }
 #menu a{
     margin: 50px;
 }
 #menu li {
     padding: 5px 0;
-    font-size: 16px;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
 }
 #menutoogle input:checked~ul {
     transform: none;
 }
 /*********************    CALCULADORA IMC      *****************************/
+.cuadroimc{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid #aacc00;
+}
+
+
 
 .container{
-    width: 30%;
-    margin: 10% auto;
+    width: 25%;
+    margin: 2% 25%;
     border: 2px solid #fb5607;
     border-radius: 10px;
     background: #d3d3d3;
@@ -152,3 +162,38 @@ input[type="number"]{
 .btn:hover{
     background: #f77f00;
 }
+/**************************    TABLA DE IMC DATOS           ***************************************/
+.tab-peso{
+    
+    border: 3px solid #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************   IMC texto  ************************************/
+.elimc{
+    width: 25%;
+    margin: 0 25%;
+    border: 2px solid #fb5607;
+    border-radius: 10px;
+}
+.elimc h3{
+    text-align: center;
+}
+.textimc{
+    text-align: justify;
+    padding: 4px;
+    font-size: 15px;
+}
+
+
