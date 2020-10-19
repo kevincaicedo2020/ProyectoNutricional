@@ -102,7 +102,7 @@ a:hover {
     margin: 0 30%;
     font-size: 25px;
     font-weight: bold;
-    font-family: 'Belleza', sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 #menu a{
     margin: 50px;
@@ -122,7 +122,6 @@ a:hover {
     float: right;
     display: flex;
     flex-wrap: wrap;
-    border: 5px solid #aacc00;
 }
 
 .container{
@@ -174,15 +173,29 @@ input[type="number"]{
     width: 100%;
 }
 
+.tab-encabezado tr th{
+    padding: 15px 0;
+    background: #0f80aa;
+}
+
+.tab-datos tr td{
+    padding: 5px 0;
+    text-align: center;
+    font-family: 'Belleza', sans-serif;
+}
+
+
 /**************************   IMC texto  ************************************/
 .elimc{
     width: 45%;
     margin: 0 10px;
     border: 2px solid #fb5607;
     border-radius: 10px;
+    font-family: 'Belleza', sans-serif;
 }
 .elimc h3{
     text-align: center;
+    font-family: 'Belleza', sans-serif;
 }
 .textimc{
     text-align: justify;

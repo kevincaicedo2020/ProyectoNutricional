@@ -6,12 +6,12 @@ body{
 p{
     font-family: 'Lato', sans-serif;
 }
-/*ENCABEZADO*/
+/****************************ENCABEZADO*****************************/
 header{
     width: 100%;
     background: #80b918;
     height: 90px;
-    /* la barra del menu sea fija*/
+
     position: fixed;
     z-index: 10;
 }
@@ -39,7 +39,7 @@ header{
     font-family: 'Pacifico', cursive;
 }
 
-/******************POSICIONAMSO EL MENU******************/
+/****************** POSICIONAMSO EL MENU ******************/
 nav{
     width: 65%;
     height: 70px;
@@ -81,7 +81,7 @@ nav ul .ultimo a:last-child{
 nav ul .ultimo a:last-child:hover{
     color: #000000;
 }
-/******** IMAGEN EN EL ENCABEZADO ************/
+/******************** IMAGEN EN EL ENCABEZADO ******************/
 .bg-fondo{
     background: url(../Img/hola2.jpg);
     width: 100%;
@@ -89,7 +89,6 @@ nav ul .ultimo a:last-child:hover{
     background-position: center;
     background-size: cover;   
 }
-
 
 .frase{
     width: 50%;
@@ -119,7 +118,7 @@ text-align: center;
     font-size: 25px;
     font-family: 'Belleza', sans-serif;
 }
-/**********************************************/
+
 .flex-contenedor {
     padding: .5em 0;
     display: flex;
@@ -136,7 +135,7 @@ text-align: center;
     text-align: center;
     background-color: #ffffff;
 }
-/**********************************************/
+
 .mision h2{
     text-align: center;
     font-size: 30px;
@@ -150,7 +149,7 @@ text-align: center;
     text-align: center;
     margin: auto;
 }
-/**********************************************/
+
 .trato{
     width: 100%;
     display: flex;
@@ -176,7 +175,6 @@ text-align: center;
     font-family: 'Belleza', sans-serif;
 }
 
-/**********************************************/
 .retos{
     width: 80%;
     margin: 45px auto;
@@ -193,7 +191,7 @@ text-align: center;
     font-size: 18px;
     line-height: 30px;
 }
-/**********************************************/
+
 .cuadro-op{
     width: 80%;
     display: flex;
@@ -219,6 +217,7 @@ text-align: center;
 .cuadro button{
     padding: 10px 10px;
     margin: 15px 0;
+    border: none;
     border-radius: 25px;
     text-decoration: none;
     font-size: 17px;
@@ -233,7 +232,6 @@ text-align: center;
     background: #ffffff;
 }
 
-/***************************************************/
 .contactame{
     background: url(../Img/cotactame.jpg);
     width: 100%;
@@ -271,8 +269,7 @@ text-align: center;
     background-color: #fb5407cb;
 }
 
-/************************************      SERVICIOS        ***********************************************************/
-/*********   imagen de head  *********/
+/************************************      SERVICIOS        *******************************/
 .bg-fondo2{
     background: url(../Img/manzana.jpg);
     width: 100%;
@@ -351,7 +348,7 @@ text-align: center;
     margin-top: 20px;
 }
 
-  /**************    FOOTER    *******************************/
+/**************    FOOTER    *******************************/
 .footer {
     background-color: #84be17;
 }
@@ -404,9 +401,82 @@ footer p {
     background: #e6520e;
 }
 
-
-
 footer .menu-social ul.redes-sociales li a {
     margin: 0 5px;
 }
 
+/****************   FORMULARIO DE CONTACTO     ****************************/
+.fondo-encabezado{
+    background: url(../Img/frutas02.jpg);
+    width: 100%;
+    height: 85vh;
+    background-position: center;
+    background-size: cover;   
+}
+
+.contacto {
+    background: #c4c4c4;
+    padding: 50px 0;
+}
+
+.seccion-titulo{
+    text-align: center;
+    font-size: 45px;
+    margin-top: -30px;
+    font-family: 'Belleza', sans-serif;
+}
+
+@media only creen and (min-width:480px) {
+    form.reserva-contacto {
+        margin: 15px 250px 15px 150px;
+    }
+}
+
+form.reserva-contacto .campo {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+form.reserva-contacto .campo input,
+form.reserva-contacto .campo textarea {
+    width: 60%;
+    border: 3px solid #16be9d;
+    padding: 15px 10px;
+}
+
+form.reseva-contacto .campo textarea {
+    height: 200px;
+}
+
+form.reserva-contacto ::-webkit-input-placerholder {
+    color: #000 !important;
+}
+
+form.reserva-contacto ::-moz-input-placerholder {
+    color: #000 !important;
+}
+
+form.reserva-contacto ::-ms-input-placerholder {
+    color: #000 !important;
+}
+
+form.reserva-contacto input[type="submit"] {
+    border: none;
+    margin: 0 auto;
+    display: block;
+    padding: 15px 70px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #e85d04;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+}
+
+form.reserva-contacto input[type="submit"]:hover {
+    background-color: #24d80e;
+    color: #000;
+    font-weight: bold;
+}

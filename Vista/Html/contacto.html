@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../Css/estilo.css">
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet"> 
+
+    <link rel="icon" type="image/png" href="../Img/logo5.png" />
+    <!-- para los iconos automaticamente de la red se enlasan   -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+</head>
+<body>
+     <!--CABEZERA-->
+     <header>
+        <div class="menu">
+            <div class="logo">
+                <p><a href="index.html">CUIDA TU VIDA</a></p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="retos.html">SERVICIO</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                    <li class="ultimo"><a href="#">LOGIN</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="fondo-encabezado"></div>
+    <!--  FORMULARIO DE CONTACTO  -->
+        <section class="contacto">
+            <div class="contenedor">
+                <h3 class="seccion-titulo">Contactame</h3>
+                <div class="seccion-divisor"></div>
+            </div>
+            <div class="contenedor-grid contenedor">
+                <form class="reserva-contacto" action="" method="POST">
+                    <div class="campo">
+                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="campo">
+                        <input type="email" name="email" placeholder="Tu email" required>
+                    </div>
+                    <div class="campo">
+                        <input type="tel" name="telefono" placeholder="Tu telefono" required>
+                    </div>
+                    <div class="campo">
+                        <textarea type="mensaje" name="mensaje" placeholder="Tu mensaje" required cols="30" rows="10"></textarea>
+                    </div>
+                    <input type="submit" name="enviar" value="Enviar" class="button">
+                </form>
+            </div>
+        </section>
+    <!--  FOOTER  -->
+    <section class="footer">
+        <footer>
+            <div class="contenedor-grid contenedor">
+                <div class="menu-social">
+                    <ul class="redes-sociales">
+                        <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social-instagran"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <p>CUIDAMOS DE TI</p>
+                <p>Todos los derechos reservados</p>  
+            </div>
+        </footer>
+    </section>
+
+
+</body>
+</html>
