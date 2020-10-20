@@ -6,7 +6,7 @@ html {
 body{
     width: 100%;
     overflow-x: hidden;
-    background: #d4d4d6;
+    background: #fff;
 }
 
 ul {
@@ -201,6 +201,53 @@ input[type="number"]{
     text-align: justify;
     padding: 4px;
     font-size: 15px;
+}
+
+/******************************     PARTE DE CAMBIAR PASSWORD             ************************************/
+.pass-cambio{
+    width: 65%;
+    float: right;
+    margin: 90px 70px;
+}
+.pass-cambio h3{
+    text-align: center;
+    font-size: 25px;
+}
+.nueva-pass{
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    border: 2px solid #aacc00;
+    border-radius: 25px;
+}
+input[type="email"], input[type="password"]{
+    width: 50%;
+    margin: 10px 25px;
+    padding: 8px 30px;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+input[type="email"], input[type="password"]:focus{
+    border: 2px solid #0f80aa;
+}
+
+input[type="submit"]{
+    margin: 20px 300px;
+    padding: 10px 80px;
+    border: none; 
+    font-family: 'Belleza', sans-serif;
+}
+input[type="submit"]:hover{
+    background: #f77f00;
+}
+
+/*****************  CALCULADORA DE PROTEINAS DIARIAS  ****************************/
+iframe{
+    float: right;
+    width: 75%;
+    height: 650px;
+    border: none;
 }
 
 
