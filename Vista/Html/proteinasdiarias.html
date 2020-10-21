@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- CALCULADORA IMC -->
     <script src="../Js/Jquery.js"></script>
-    <script src="../Js/funciones.js"></script>
+    <script src="../Js/proteinasdiarias.js"></script>
 
 </head>
 <body>
@@ -38,9 +38,7 @@
         </ul>
     </div>
 </nav>
-
 <!-- calculadora de proteinas diarias -->
-
 <div class="proteinas">
     <h2>Proteinas Diarias</h2>
     <div class="contenedor-proteinas">
@@ -48,19 +46,19 @@
         <input type="text" id="peso" name="peso"> <br>
         <label for="actividad">Actividad Fisica:</label>
         <select name="opcion" id="opcion">
-            <option value="">Sedentario</option>
-            <option value="">Atletico</option>
-            <option value="">Moderado</option>
+            <option value="1">Sedentario</option>
+            <option value="2">Atletico</option>
+            <option value="3">Resistencia</option>
+            <option value="4">Fuerza</option>
         </select> <br>
         <div class="resultado-gramos">
-            <label for="">Proteinas Diarias(Gramos):</label>
-            <label for="resultado" id="resultado" >......</label>
+            <p id="resul-gramos">
+                Proteinas Diarias(Gramos): <span>....</span>
+            </p>
         </div>
     </div>
-
-    <input type="button" id="calcular" value="Calcular">
+    <input type="button" id="calcular" value="Calcular" >
 </div>
-
 
 </body>
 </html>
