@@ -25,15 +25,13 @@
         <span></span>
         <ul id="menu">
             <p class="centradop">MENU</p>
-            <a href="#">
-                <li>Cambiar Contraseña</li></a>
-            <a href="#">
+            <a href="panelpaciente.html">
                 <li>Tabla de IMC</li></a>
             <a href="#">
                 <li>Ver Plan Nutricional Asignado</li></a>
             <a href="#">
                 <li>Calculadora de Peso Ideal</li></a>
-            <a href="#">
+            <a href="proteinasdiarias.html">
                 <li>Calculadora de Proteinas Diarias</li></a>
             <a href="#">
                 <li> ---------- CIERRE DE SESION  ----------</li></a>
@@ -42,9 +40,26 @@
 </nav>
 
 <!-- calculadora de proteinas diarias -->
-<iframe src="https://es.calcuworld.com/calculadora-nutricional/calculadora-de-proteinas/?iframe=1" ></iframe>
 
+<div class="proteinas">
+    <h2>Proteinas Diarias</h2>
+    <div class="contenedor-proteinas">
+        <label for="peso">Peso(Kg):</label>
+        <input type="text" id="peso" name="peso"> <br>
+        <label for="actividad">Actividad Fisica:</label>
+        <select name="opcion" id="opcion">
+            <option value="">Sedentario</option>
+            <option value="">Atletico</option>
+            <option value="">Moderado</option>
+        </select> <br>
+        <div class="resultado-gramos">
+            <label for="">Proteinas Diarias(Gramos):</label>
+            <label for="resultado" id="resultado" >......</label>
+        </div>
+    </div>
 
+    <input type="button" id="calcular" value="Calcular">
+</div>
 
 
 </body>

@@ -1,12 +1,13 @@
-/************************** CODIGO PARA EL MENU DEL PANEL DE PACIENTE  ********************************************************/
 html {
-    /*para que se despalze suavemente*/
     scroll-behavior: smooth;
 }
 body{
+    clear: both;
     width: 100%;
     overflow-x: hidden;
-    background: #fff;
+    background-image: url(../Img/donfo01.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 ul {
@@ -15,9 +16,7 @@ ul {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4{
     font-family: 'Belleza', sans-serif;
     color: #000;
 }
@@ -129,8 +128,8 @@ a:hover {
     margin-top: 2%;
     border: 2px solid #fb5607;
     border-radius: 10px;
-    background: #d3d3d3;
-    margin: 8px  ;
+    background: #d3d3d39d;
+    margin: 8px;
 }      
 .imc-title h1{
     text-align: center;
@@ -162,7 +161,7 @@ input[type="number"]{
 .btn:hover{
     background: #f77f00;
 }
-/**************************    TABLA DE IMC DATOS           ***************************************/
+/**************************    TABLA DE IMC DATOS   ***************************************/
 
 .tab-peso{
     width: 50%;
@@ -192,6 +191,7 @@ input[type="number"]{
     border: 2px solid #fb5607;
     border-radius: 10px;
     font-family: 'Belleza', sans-serif;
+    background: #d3d3d39d;
 }
 .elimc h3{
     text-align: center;
@@ -203,51 +203,47 @@ input[type="number"]{
     font-size: 15px;
 }
 
-/******************************     PARTE DE CAMBIAR PASSWORD             ************************************/
-.pass-cambio{
-    width: 65%;
+/*****************  CALCULADORA DE PROTEINAS DIARIAS  ****************************/
+.proteinas{
+    clear: both;
+    width: 40%;
     float: right;
-    margin: 90px 70px;
-}
-.pass-cambio h3{
+    margin: 90px 15%;
+    border: 2px solid #fb5607;
+    border-radius: 20px;
+    background: #d3d3d39d;
+}  
+
+.proteinas h2{
     text-align: center;
-    font-size: 25px;
-}
-.nueva-pass{
-    width: 50%;
-    margin: 0 auto;
-    padding: 10px 15px;
-    border: 2px solid #aacc00;
-    border-radius: 25px;
-}
-input[type="email"], input[type="password"]{
-    width: 50%;
-    margin: 10px 25px;
-    padding: 8px 30px;
-    border-radius: 25px;
-    border: none;
-    font-family: 'Lato', sans-serif;
-}
-input[type="email"], input[type="password"]:focus{
-    border: 2px solid #0f80aa;
 }
 
-input[type="submit"]{
-    margin: 20px 300px;
-    padding: 10px 80px;
-    border: none; 
-    font-family: 'Belleza', sans-serif;
+.contenedor-proteinas{
+    width: 70%;
+    margin: 5px;
+    padding: 25px;
 }
-input[type="submit"]:hover{
+
+input[type="text"]{
+    margin: 20px 20px;
+    padding: 4px 55px;
+    
+}
+select{
+    margin: 20px 20px;
+    padding: 4px 75px;
+}
+
+.resultado-gramos{
+    margin: 20px 0;
+}
+
+input[type="button"]{
+    margin: 20px 180px;
+    padding: 6px 60px;
+    border-radius: 25px;
+    border: none;
+}
+input[type="button"]:hover{
     background: #f77f00;
 }
-
-/*****************  CALCULADORA DE PROTEINAS DIARIAS  ****************************/
-iframe{
-    float: right;
-    width: 75%;
-    height: 650px;
-    border: none;
-}
-
-
