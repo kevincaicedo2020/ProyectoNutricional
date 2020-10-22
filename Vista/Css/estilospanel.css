@@ -85,7 +85,7 @@ a:hover {
 }
 #menu {
     position: absolute;
-    width: 300px;
+    width: 250px;
     height: 1000px;
     margin: -100px 0 0 -56px;
     padding-top: 50px;
@@ -98,8 +98,8 @@ a:hover {
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 .centradop{
-    margin: 0 30%;
-    font-size: 25px;
+    margin: 0 15%;
+    font-size: 16px;
     font-weight: bold;
     font-family: 'Pacifico', cursive;
 }
@@ -239,11 +239,17 @@ select{
 }
 
 input[type="button"]{
-    margin: 20px 180px;
-    padding: 6px 60px;
+    margin: 15px 35px;
+    padding: 6px 40px;
     border-radius: 25px;
     border: none;
 }
 input[type="button"]:hover{
     background: #f77f00;
+}
+
+#resul-gramos span{
+    color: #0c33b4;
+    font-weight: bold;
+    font-size: 23px;
 }

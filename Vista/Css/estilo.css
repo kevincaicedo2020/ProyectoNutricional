@@ -264,6 +264,10 @@ text-align: center;
     background-color:  #ffffff7c;
     font-size: 20px;
 }
+.bu-contacto a{
+    text-decoration: none;
+    color: #000;
+}
 
 .bu-contacto:hover{
     background-color: #fb5407cb;
