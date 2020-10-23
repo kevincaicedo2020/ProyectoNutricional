@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <!-- PESO IDEAL -->
     <script src="../Js/Jquery.js"></script>
-
+    <script src="../Js/pesoIdeal-planNutricional.js"></script>
 
 </head>
 <body>
@@ -38,6 +38,36 @@
         </ul>
     </div>
 </nav>
+
+<!-- PESO IDEAL DE UNA PERSONA -->
+<div class="contenedor-pesoIdeal">
+    <h2>CALCULA TU PESO IDEAL</h2>
+    <div class="datos-persona">
+        <label for="estatura">Estatura (m):</label>
+        <input type="text" id="estatura" name="estatura"> <br>
+
+        <label for="edad">Edad:</label>
+        <input type="text" id="edad" name="edad"> <br>
+
+        <label for="contextura">Contextura:</label>
+        <select name="opcion" id="opcion">
+            <option value="1">Delgado</option>
+            <option value="2">Normal</option>
+            <option value="3">Ancho</option>
+        </select> <br>
+
+            <p id="resultado-peso">
+                El peso Ideal: <span>  ......  </span> Kg
+            </p>
+
+
+
+        <input type="submit" value="Calcular" id="calcular">
+
+
+
+    </div>
+</div>
 
 
 

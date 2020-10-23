@@ -115,3 +115,64 @@ a:hover {
 #menutoogle input:checked~ul {
     transform: none;
 }
+/*******************************     PESO IDEAL        ******************************/
+.contenedor-pesoIdeal{
+    width: 35%;
+    margin: 50px 550px;
+    border: 2px solid #fb5607;
+    border-radius: 15px;
+    background: #979696af;
+}
+
+.contenedor-pesoIdeal h2{
+    text-align: center;
+}
+
+.datos-persona{
+    width: 80%;
+    margin: 30px auto;
+    padding: 15px 0;
+}
+
+input[type="text"]{
+    width: 60%;
+    margin: 10px 0;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+}
+
+#edad{
+    margin-left: 45px;
+}
+
+#opcion{
+    margin-left: 10px;
+}
+
+#opcion{
+    width: 60%;
+    margin-top: 15px;
+    padding: 6px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+#resultado-peso span{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    margin: 15px 30%;
+    padding: 6px 60px;
+    border: none;
+    border-radius: 15px;
+}
+
+input[type="submit"]:hover{
+    background: #fb5607;
+}
+
