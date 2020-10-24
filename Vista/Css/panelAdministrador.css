@@ -1,0 +1,232 @@
+.foto_registro{
+    background-image: url(../Img/registro_pacienti.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+/************  MENU  ****************************/
+a {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    color: #ffffff;
+  }   
+  #menutoogle {
+    display: block;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  #menutoogle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+  }
+  #menutoogle span {
+    display: block;
+    width: 32px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #000;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), backgroun 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+  }
+  #menutoogle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  #menutoogle span:first-child(2) {
+    transform-origin: 0% 100%;
+  }
+  #menutoogle input:checked~span {
+    opacity: 1;
+    transform: rotate(40deg) translate(-2px, 1px);
+    background: #223322;
+  }
+  #menutoogle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #menutoogle input:checked~span:nth-last-child(2) {
+    transform: rotate(-50deg) translate(0, -1px);
+  }
+  #menu {
+    position: absolute;
+    width: 290px;
+    height: 1000px;
+    margin: -100px 0 0 -56px;
+    padding-top: 50px;
+    padding-top: 125px;
+    padding-left: 3rem;
+    background: #fb8b24;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+  .centradop{
+    margin: 0 15%;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+  }
+  #menu a{
+    margin: 50px;
+  }
+  #menu li {
+    padding: 5px 0;
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+  }
+  #menutoogle input:checked~ul {
+    transform: none;
+  }
+
+  /******************    PARTE DEL LOS DATOS A EDITAR       **************/
+.contenedor-global{
+    width: 55%;
+    margin-right: 180px;
+    margin-bottom: 10px;       
+    padding: 25px;
+    border-radius: 15px;
+    background: #75747477;
+}
+
+.buscar-usuario input[type="text"]{
+    width: 20%;
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+}
+
+.buscar-usuario input[type="submit"]{
+    margin:  0 30px;
+    padding: 8px 50px;
+    border-radius: 15px;
+    border: none;
+    background: #89ca10;
+}
+
+.buscar-usuario input[type="submit"]:hover{
+    background: #fb8b24;
+}
+
+/********* DATOS DENTRO DEL FILESET   *************/
+.informacion-editar{
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px 8px;
+}
+
+fieldset input[type="number"]{
+    width: 50%;
+    margin: 15px 0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 2px solid #89ca10;
+}
+
+fieldset input[type="text"]{
+    width: 50%;
+    margin: 15px 0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 2px solid #89ca10;
+}
+
+fieldset input[type="email"]{
+    width: 50%;
+    margin: 15px 0;
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 2px solid #89ca10;
+}
+
+/*********** RADIOS BUTTON   ***************/
+.negrita-radio{
+    width: 60%;
+    font-weight: bold;
+}
+
+/******  BOTON EEDITAR  *******/
+fieldset input[type="submit"]{
+    margin: 0 10%;
+    padding: 5px  180px;
+    border-radius: 5px;
+    border: none;
+}
+
+fieldset input[type="submit"]:hover{
+    background: #89ca10;
+}
+
+/******** ALINEANDO TODOS LOS INPUT DE INFORMACION  ******************/
+#cedula{
+    border: 2px solid #89ca10;
+    margin-left: 0 45px;
+}       
+
+
+fieldset #cedula{
+    margin-left: 25px;
+}
+
+fieldset #nombre{
+    margin-left: 18px;
+}
+
+fieldset #edad{
+    margin-left: 35px;
+}
+
+fieldset #masculino{
+    margin-left: 65px;
+}
+
+fieldset #telefono{
+    margin-left: 14px;
+}
+
+fieldset #correo{
+    margin-left: 30px;
+}
+
+fieldset #peso{
+    margin-left: 10px;
+}
+
+fieldset #altura{
+    margin-left: 10px;
+}
+
+
+
+
+
+
+

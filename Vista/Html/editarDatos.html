@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro</title>
+    <link rel="stylesheet" href="../Css/normalize.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
+    <!--  ESTILOS DE CSS DEL PANEL ADMINISTRADOR     -->
+    <link rel="stylesheet" href="../Css/panelAdministrador.css">
+
+</head>
+<body>
+
+    <div class="foto_registro">
+    <!-- MENU -->
+                <nav id="navegacion">
+                    <div id="menutoogle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <ul id="menu">
+                            <p class="centradop">CUIDAMOS DE TI</p>
+                            <a href="registro.html">
+                                <li> <i class="fas fa-2x fa-male"> </i> Registro de nuevo Usuario</li></a>
+                            <a href="#">
+                                <li> <i class="fas fa-2x fa-user-edit"></i> Editar datos de Usuario</li></a>
+                            <a href="#">
+                                <li> <i class="far fa-2x fa-clipboard"> </i> Crear Plan Nutricional</li></a>
+                            <a href="#">
+                                <li> <i class="fas fa-2x fa-apple-alt"> </i> Tablas de Proteinas</li></a>
+                            <a href="#">
+                                <li> <i class="fas fa-2x fa-male"> </i> </i> Tablas de IMC</li></a>
+                            <a href="#">
+                            <li> <i class="fas fa-2x fa-child"></i> Peso Ideal</li></a>
+                            <a href="#">
+                            <li> <i class="far fa-2x fa-times-circle"> </i> CIERRE DE SESION </li></a>
+                        </ul>
+                    </div>
+                </nav>
+
+<section class="contenedor-global">
+    <div class="buscar-usuario">
+        <label for="buscar">Buscar Paciente:</label>
+        <input type="text" id="buscar-cedula" name="buscar">
+        <input type="submit" id="buscar-dato" value="Buscar">
+    </div>
+
+    <div class="informacion-editar">
+        <fieldset>
+            <legend> Informacion </legend>
+            <label for="cedula">Cedula:</label> 
+            <input type="number" id="cedula" name="cedula"> <br>
+
+
+            <label for="nombre">Nombre:</label> 
+            <input type="text" id="nombre" name="nombre"> <br>
+
+            <label for="edad">Edad:</label> 
+            <input type="number" id="edad" name="edad"> <br>
+
+
+            <div class="negrita-radio">
+                <label for="sexo">Sexo:</label>
+                <input type="radio" id="masculino" name="sexo" value="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="femenino" name="sexo" value="femenino">
+                <label for="femenino">femenino</label> <br>
+            </div>
+
+            <label for="telefono">Telefono:</label> 
+            <input type="number" id="telefono" name="telefono"> <br>
+
+            <label for="correo">Email:</label> 
+            <input type="email" id="correo" name="correo"> <br>
+
+            <label for="peso">Peso(Kg):</label> 
+            <input type="number" id="peso" name="peso"> <br>
+
+            <label for="altura">Altura(m)</label> 
+            <input type="number" id="altura" name="altura"> <br>
+
+            <input type="submit" value="Editar">
+
+        </fieldset>
+    </div>
+</section>
+
+
+</body>
+</html>
