@@ -1,0 +1,226 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+  }
+  body{
+      font-size: 1.8rem;
+  }
+  img{
+      max-width: 100%;
+  }
+  /*Formulario y Login*/
+  .foto_login{
+      background-image: url(../Img/plato1.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .foto_registro{
+    background-image: url(../Img/registro_pacienti.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+  .centar_contenido{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 98vh;
+      width: 55%;
+  }
+  .input_campo{
+    background: transparent;
+    border: none;
+  }
+
+.texto_lista1{
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Gayathri', sans-serif;
+}
+  .texto{
+      color: #ffffff;
+      letter-spacing: 6px;
+  }
+  .formulario{
+      height: 100%;
+      position: relative;
+  }
+  .formulario form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .campo{
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+  }
+  .campo_user{
+      display: flex;
+      justify-content: space-evenly;
+      margin: 0 auto;
+      width: 70%;
+  }
+  .icon_user{
+      text-align: center;
+      border-radius: 5px;
+      padding: 2rem 4rem;
+      width: 30%;
+  }
+  .iconos{
+      font-size: 7rem;
+      color: #ffffff;
+      cursor: pointer;
+  }
+  .iconos:hover{
+      color: #34F211;
+  }
+  .hola1,.hola2{
+      display: none;
+      font-size: 4rem;
+      color: #2AC10F;
+  }
+  #nutricionista:checked ~ .hola1{
+    display: flex;
+  }
+  #paciente:checked ~ .hola2{
+    display: flex;
+  }
+  .icon_user{
+    display: flex;
+    align-items: center;
+  }
+  .icon_user input{
+      display: none;
+  }
+  .icon{
+    flex: 0 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .adicional{
+    margin: 0 auto;
+    
+  }
+  .campo_lista{
+    flex: 0 0 90%;
+  }
+  .icono{
+      color: #ffffff;
+      font-size: 4.8rem;
+  }
+  .icono_grande{
+    font-size: 6rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+  }
+  .icono:hover{
+      color: #34F211;
+  }
+  .input_campo{
+      height: 5.3rem;
+      width: 100%;
+      text-align: center;
+      color: #ffffff;
+      font-size: 2.8rem;
+      text-shadow: 1px 3px 7px #000000;
+  }
+  .input_campo::placeholder{
+      color: #ffffff;
+      text-shadow: 1px 3px 5px #000000;
+      font-size: 2.3rem;
+      text-transform: uppercase;
+  }
+  .submit{
+      display: flex;
+      justify-content: center;
+  }
+  .input_submit{
+      display: inline-block;
+      width: 100%;
+      padding: 1rem 0;
+      border: 0;
+      border-radius: 0.5rem;
+      font-size: 2.1rem;
+      cursor: pointer;
+      background-color: #2AC10F;
+      color: #ffffff;
+      margin-top: 1rem;
+  }
+  .input_submit:hover{
+      background-color: #ffffff;
+      color: #2AC10F;
+  }
+  .boton_usuario1,.boton_usuario2{
+      width: 20%;
+      font-size: 2rem;
+      padding: 0.3rem 0;
+      text-align: center;
+      margin:0;
+  }
+  .boton_usuario1{
+    border-radius: 1rem 0 0 1rem;
+  }
+  .boton_usuario2{
+    border-radius: 0 1rem 1rem 0;
+  }
+  .cuadro_extra{
+      background-color: rgba(81, 89, 89, 0.3);
+      border-radius: 5px;
+      margin-right: 1rem;
+      padding: 1.5rem;
+  }
+  /*tipo paciente/nutricionista*/
+#selecciona_paciente, #selecciona_nutricionista{
+  display: none;
+}
+.boton_usuario1{
+  position: absolute;
+  top: 10%;
+  left: 53%;
+  border-right: 1px solid black;
+}
+.boton_usuario2{
+  position: absolute;
+  top: 10%;
+  left: 73%;
+}
+/*intercambio de registros*/
+.seccion_nutricionista{
+  display: none;
+  height: 85%;
+}
+.seccion_paciente{
+  display: none;
+}
+#selecciona_paciente:checked ~ .seccion_paciente{
+  display: block;
+}
+#selecciona_nutricionista:checked ~ .seccion_nutricionista{
+  display: block;
+}
+#olvidarContraseña{
+  text-align: center;
+  margin-top: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem;
+}
