@@ -13,6 +13,178 @@ html {
   img{
       max-width: 100%;
   }
+                      /*HEADER*/
+  header{
+    width: 100%;
+    background: #80b918;
+    height: 90px;
+    position: fixed;
+    z-index: 10;
+}
+
+.menu{
+    width: 80%;
+    height: 70px;
+    margin: auto;
+}
+
+.logo{
+    width: 35%;
+    height: 70px;
+    float: left;
+    padding-top: 10px;
+    /*PARA QUE EL CONTENEDOR NO SE AGRANDE*/
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.logo p a {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color:  #ffffff;
+    font-family: 'Pacifico', cursive;
+}
+
+/****************** POSICIONAMSO EL MENU ******************/
+#nvg_menu_arriba{
+    width: 65%;
+    height: 50px;
+    float: left;
+    text-align: right;
+    padding-top: 34px;
+/*PARA QUE EL CONTENEDOR NO SE AGRANDE*/
+    box-sizing: border-box;
+}
+
+#nvg_menu_arriba ul li {
+    /*menu ponemos horizontal*/
+    display: inline;
+}
+
+#nvg_menu_arriba ul li a {
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+/*ESPACIOS ENTRE MENU*/
+    padding-left: 16px;
+    font-weight: bold;
+/*UN ESPACIO ENTRE LETRA*/
+    letter-spacing: 1px;
+}
+
+#nvg_menu_arriba ul li a:hover{
+    color: #d00000;
+}
+ .ultimo a{
+    padding: 12px 18px;
+    background: #e85d04;
+}
+#nvg_menu_arriba ul .ultimo a:last-child{
+    border-radius: 25px;
+    color: #ffffff;
+}
+#nvg_menu_arriba ul .ultimo a:last-child:hover{
+    color: #000000;
+}
+/*MENU*/
+/************  MENU  ****************************/
+a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #ffffff;
+}   
+#menutoogle {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menutoogle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+#menutoogle span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #000;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), backgroun 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+#menutoogle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menutoogle span:first-child(2) {
+  transform-origin: 0% 100%;
+}
+#menutoogle input:checked~span {
+  opacity: 1;
+  transform: rotate(40deg) translate(-2px, 1px);
+  background: #223322;
+}
+#menutoogle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menutoogle input:checked~span:nth-last-child(2) {
+  transform: rotate(-50deg) translate(0, -1px);
+}
+#menu {
+  position: absolute;
+  width: 290px;
+  height: 1000px;
+  margin: -100px 0 0 -56px;
+  padding-top: 50px;
+  padding-top: 125px;
+  padding-left: 3rem;
+  background: #fb8b24;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+.centradop{
+  margin: 0 15%;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
+}
+#menu a{
+  margin: 50px;
+}
+#menu li {
+  padding: 5px 0;
+  font-size: 14px;
+  font-family: 'Lato', sans-serif;
+}
+#menutoogle input:checked~ul {
+  transform: none;
+}
+
   /*Formulario y Login*/
   .foto_login{
       background-image: url(../Img/plato1.jpg);
@@ -47,6 +219,13 @@ html {
   }
 
 .texto_lista1{
+  font-size: 4rem;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Gayathri', sans-serif;
+}
+.texto_lista2{
+  margin-top: 20%;
   font-size: 4rem;
   text-align: center;
   font-weight: bold;
@@ -175,12 +354,6 @@ html {
       text-align: center;
       margin:0;
   }
-  .boton_usuario1{
-    border-radius: 1rem 0 0 1rem;
-  }
-  .boton_usuario2{
-    border-radius: 0 1rem 1rem 0;
-  }
   .cuadro_extra{
       background-color: rgba(81, 89, 89, 0.3);
       border-radius: 5px;
@@ -192,15 +365,17 @@ html {
   display: none;
 }
 .boton_usuario1{
+  border-radius: 1rem 0 0 1rem;
   position: absolute;
   top: 10%;
-  left: 53%;
+  left: 58%;
   border-right: 1px solid black;
 }
 .boton_usuario2{
+  border-radius: 0 1rem 1rem 0;
   position: absolute;
   top: 10%;
-  left: 73%;
+  left: 78%;
 }
 /*intercambio de registros*/
 .seccion_nutricionista{
@@ -224,3 +399,4 @@ html {
   font-weight: bold;
   font-size: 2rem;
 }
+ 
