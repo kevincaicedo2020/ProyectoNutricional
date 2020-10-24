@@ -216,15 +216,18 @@ input[type="number"]{
 
 .proteinas h2{
     text-align: center;
+    font-family: 'Belleza', sans-serif;
 }
 
 .contenedor-proteinas{
     width: 70%;
     margin: 5px;
     padding: 25px;
+    font-family: 'Lato', sans-serif;
 }
 
 input[type="text"]{
+    width: 40%;
     margin-bottom: 15px;
     margin-left: 40px;
     padding: 4px 55px;
@@ -233,9 +236,10 @@ input[type="text"]{
 }
 
 #opcion{
-    width: 70%;
+    width: 65%;
     border-radius: 10px;
     border: none;
+    font-family: 'Lato', sans-serif;
 }
 
 select{
@@ -245,6 +249,7 @@ select{
 
 .resultado-gramos{
     margin: 20px 0;
+    font-family: 'Lato', sans-serif;
 }
 
 input[type="button"]{
@@ -252,6 +257,7 @@ input[type="button"]{
     padding: 6px 40px;
     border-radius: 25px;
     border: none;
+    font-family: 'Lato', sans-serif;
 }
 input[type="button"]:hover{
     background: #f77f00;
@@ -261,4 +267,5 @@ input[type="button"]:hover{
     color: #0c33b4;
     font-weight: bold;
     font-size: 23px;
+    font-family: 'Lato', sans-serif;
 }

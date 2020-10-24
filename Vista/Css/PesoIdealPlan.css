@@ -121,11 +121,12 @@ a:hover {
     margin: 50px 550px;
     border: 2px solid #fb5607;
     border-radius: 15px;
-    background: #979696af;
+    background: #d3d3d39d;
 }
 
 .contenedor-pesoIdeal h2{
     text-align: center;
+    font-family: 'Belleza', sans-serif;
 }
 
 .datos-persona{
@@ -141,14 +142,17 @@ input[type="text"]{
     text-align: center;
     border-radius: 15px;
     border: none;
+    font-family: 'Lato', sans-serif;
 }
 
 #edad{
     margin-left: 45px;
+    font-family: 'Lato', sans-serif;
 }
 
 #opcion{
     margin-left: 10px;
+    font-family: 'Lato', sans-serif;
 }
 
 #opcion{
@@ -163,6 +167,7 @@ input[type="text"]{
     color: blue;
     font-size: 20px;
     font-weight: bold;
+    font-family: 'Lato', sans-serif;
 }
 
 input[type="submit"]{
