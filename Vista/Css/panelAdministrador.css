@@ -110,15 +110,15 @@ a {
 .contenedor-global{
     width: 55%;
     margin-right: 180px;
-    margin-bottom: 10px;       
-    padding: 25px;
+    margin-bottom: 5px;       
+    padding: 15px;
     border-radius: 15px;
     background: #75747477;
 }
 
 .buscar-usuario input[type="text"]{
     width: 20%;
-    margin: 10px 0;
+    margin: 3px 0;
     padding: 5px 10px;
     border-radius: 15px;
     border: none;
@@ -129,11 +129,11 @@ a {
     padding: 8px 50px;
     border-radius: 15px;
     border: none;
-    background: #89ca10;
+    background: #2AC10F;
 }
 
 .buscar-usuario input[type="submit"]:hover{
-    background: #fb8b24;
+    background: #ffffff;
 }
 
 /********* DATOS DENTRO DEL FILESET   *************/
@@ -179,10 +179,11 @@ fieldset input[type="submit"]{
     padding: 5px  180px;
     border-radius: 5px;
     border: none;
+    background: #2AC10F;
 }
 
 fieldset input[type="submit"]:hover{
-    background: #89ca10;
+    background: #ffffff;
 }
 
 /******** ALINEANDO TODOS LOS INPUT DE INFORMACION  ******************/
@@ -190,7 +191,6 @@ fieldset input[type="submit"]:hover{
     border: 2px solid #89ca10;
     margin-left: 0 45px;
 }       
-
 
 fieldset #cedula{
     margin-left: 25px;
@@ -223,10 +223,3 @@ fieldset #peso{
 fieldset #altura{
     margin-left: 10px;
 }
-
-
-
-
-
-
-
