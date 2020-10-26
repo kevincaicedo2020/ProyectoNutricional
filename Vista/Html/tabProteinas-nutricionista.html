@@ -10,10 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
     <!--  ESTILOS DE CSS DEL PANEL ADMINISTRADOR     -->
     <link rel="stylesheet" href="../Css/panelAdministrador.css">
+    <link rel="stylesheet" href="../Css/planNutricionista.css">
+
+    <!-- archivos jquery para calcular las proteinas panel nutricionista -->
+    <script src="../Js/Jquery.js"></script>
+    <script src="../Js/proteinasdiarias.js"></script>
+
 
 </head>
 <body>
-
     <div class="foto_registro">
     <!-- MENU -->
                 <nav id="navegacion">
@@ -42,53 +47,28 @@
                     </div>
                 </nav>
 
-<section class="contenedor-global">
-    <div class="buscar-usuario">
-        <label for="buscar">Buscar Paciente:</label>
-        <i class="fas fa-search"> </i><input type="text" id="buscar-cedula" name="buscar" placeholder="230007225-3">
-        <input type="submit" id="buscar-dato" value="Buscar">
+<!-- calculadora de proteinas diarias -->
+<div class="proteinas">
+    <h2>Proteinas Diarias</h2>
+    <div class="contenedor-proteinas">
+        <label for="peso">Peso(Kg):</label>
+        <input type="text" id="peso" name="peso" placeholder="ejemplo 54"> <br>
+        <label for="actividad">Actividad Fisica:</label>
+        <select name="opcion" id="opcion">
+            <option value="1">Sedentario</option>
+            <option value="2">Atletico</option>
+            <option value="3">Resistencia</option>
+            <option value="4">Fuerza</option>
+        </select> <br>
+        <div class="resultado-gramos">
+            <p id="resul-gramos">
+                Proteinas Diarias: <span> ...... </span> gramos
+            </p>
+        </div>
     </div>
-
-    <div class="informacion-editar">
-        <fieldset>
-            <legend> Informacion </legend>
-            <label for="cedula">Cedula:</label> 
-            <input type="number" id="cedula" name="cedula" placeholder="Ingresa tu cedula"> <br>
-
-
-            <label for="nombre">Nombre:</label> 
-            <input type="text" id="nombre" name="nombre" placeholder="Ingres tu nombre"> <br>
-
-            <label for="edad">Edad:</label> 
-            <input type="number" id="edad" name="edad" placeholder="Ingresa tu edad"> <br>
-
-
-            <div class="negrita-radio">
-                <label for="sexo">Sexo:</label>
-                <input type="radio" id="masculino" name="sexo" value="masculino">
-                <label for="masculino">Masculino</label>
-                <input type="radio" id="femenino" name="sexo" value="femenino">
-                <label for="femenino">femenino</label> <br>
-            </div>
-
-            <label for="telefono">Telefono:</label> 
-            <input type="number" id="telefono" name="telefono" placeholder="Ingresa tu celular">  <br>
-
-            <label for="correo">Email:</label> 
-            <input type="email" id="correo" name="correo" placeholder="Ingresa tu Gmail"> <br>
-
-            <label for="peso">Peso(Kg):</label> 
-            <input type="number" id="peso" name="peso" placeholder="Ingresa tu pero en Kg"> <br>
-
-            <label for="altura">Altura(m)</label> 
-            <input type="number" id="altura" name="altura" placeholder="Ingresa tu altura en m"> <br>
-
-            <input type="submit" value="Editar">
-
-        </fieldset>
-    </div>
-</section>
-
+    <input type="button" id="calcular" value="Calcular" >
+ 
+</div>
 
 </body>
 </html>
