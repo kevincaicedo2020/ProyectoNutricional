@@ -53,24 +53,24 @@
             <input type="radio" name="nada_importante" id="selecciona_nutricionista">
           
             <label for="selecciona_paciente" class="input_submit boton_usuario1">
-                <p>Paciente</p>
+                <p>PACIENTE</p>
             </label>
             
             <label for="selecciona_nutricionista" class="input_submit boton_usuario2">
-                <p>Nutricionista</p>
+                <p>NUTRICIONISTA</p>
             </label>
 
 
 
             <div class="seccion_paciente">
             <div class="formulario">
-            <form action="#" method="POST">
+            <form action="../../Controlador/Php/Main.php" method="POST">
             <div class="campo">
                 <div class="icon">
                     <i class="fas fa-id-card icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="cedulaPaciente" placeholder="Ingresa tu cedula" required>
+                    <input type="number" class="input_campo" name="cedula" placeholder="Ingresa tu cedula" required>
                     <hr>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                     <i class="fas fa-bookmark icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="text" class="input_campo" name="nombrePaciente" placeholder="Ingresa tu nombre" required>
+                    <input type="text" class="input_campo" name="nombre" placeholder="Ingresa tu nombre" required>
                     <hr>
                 </div>
             </div>    
@@ -88,18 +88,18 @@
                     <i class="fas fa-list-ol icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="edadPaciente" placeholder="Ingresa tu edad" required>
+                    <input type="number" class="input_campo" name="edad" placeholder="Ingresa tu edad" required>
                     <hr>
                 </div>
             </div>
             <div class="campo ">
                 <div class="icon adicional">
                     <label for="Fpaciente"><i class="fas fa-female icono icono_grande"></i></label>
-                    <input type="radio" name="sexoPaciente" required id="Fpaciente">
+                    <input type="radio" name="sexo" value="F" required id="Fpaciente">
                 </div>
                 <div class="icon adicional">
                     <label for="Mpaciente"><i class="fas fa-male icono icono_grande"></i></label>
-                    <input type="radio" name="sexoPaciente" required id="Mpaciente">
+                    <input type="radio" name="sexo" value="M" required id="Mpaciente">
                 </div>
             </div>
             <div class="campo">
@@ -107,7 +107,7 @@
                     <i class="fas fa-tty icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="telefonoPaciente" placeholder="Ingresa tu telefono" required>
+                    <input type="number" class="input_campo" name="telefono" placeholder="Ingresa tu telefono" required>
                     <hr>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                     <i class="fas fa-at icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="email" class="input_campo" name="emailPaciente" placeholder="Ingresa tu email" required>
+                    <input type="email" class="input_campo" name="email" placeholder="Ingresa tu email" required>
                     <hr>
                 </div>
             </div>
@@ -125,7 +125,7 @@
                     <i class="fas fa-weight icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="pesoPaciente" placeholder="Ingresa tu peso(Kg)" required>
+                    <input type="number" class="input_campo" name="peso" placeholder="Ingresa tu peso(Kg)" required>
                     <hr>
                 </div>
             </div>
@@ -134,12 +134,12 @@
                     <i class="far fa-calendar-alt icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" step="0.01" name="estaturaPaciente" placeholder="Ingresa tu estatura(m)" required>
+                    <input type="number" class="input_campo" step="0.01" name="estatura" placeholder="Ingresa tu estatura(m)" required>
                     <hr>
                 </div>
             </div>
             <div class="submit">
-                <input type="submit" class="input_submit" value="ENVIAR DATOS DE PACIENTE">
+                <input type="submit" class="input_submit" name="paciente" value="ENVIAR DATOS DE PACIENTE">
             </div>
         </form>
     </div>
@@ -147,13 +147,13 @@
 
         <div class="seccion_nutricionista">
                     <div class="formulario">
-                    <form action="#" method="POST">
+                    <form action="../../Controlador/Php/Main.php" method="POST">
             <div class="campo">
                 <div class="icon">
                     <i class="fas fa-id-card icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="cedulaNutricionista" placeholder="Ingresa tu cedula" required>
+                    <input type="number" class="input_campo" name="cedula"  placeholder="Ingresa tu cedula" required>
                     <hr>
                 </div>
             </div>
@@ -162,7 +162,7 @@
                     <i class="fas fa-bookmark icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="text" class="input_campo" name="nombreNutricionista" placeholder="Ingresa tu nombre" required>
+                    <input type="text" class="input_campo" name="nombre" placeholder="Ingresa tu nombre" required>
                     <hr>
                 </div>
             </div>    
@@ -171,18 +171,18 @@
                     <i class="fas fa-list-ol icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="edadNutricionista" placeholder="Ingresa tu edad" required>
+                    <input type="number" class="input_campo" name="edad" placeholder="Ingresa tu edad" required>
                     <hr>
                 </div>
             </div>
             <div class="campo ">
                 <div class="icon adicional">
                     <label for="Fnutricionista"><i class="fas fa-female icono icono_grande"></i></label>
-                    <input type="radio" name="sexoNutricionista" required id="Fnutricionista">
+                    <input type="radio" name="sexo" value="F" required id="Fnutricionista">
                 </div>
                 <div class="icon adicional">
                     <label for="Mnutricionista"><i class="fas fa-male icono icono_grande"></i></label>
-                    <input type="radio" name="sexoNutricionista" required id="Mnutricionista">
+                    <input type="radio" name="sexo" value="M" required id="Mnutricionista">
                 </div>
             </div>
             <div class="campo">
@@ -190,7 +190,7 @@
                     <i class="fas fa-tty icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="telefonoNutricionista" placeholder="Ingresa tu telefono" required>
+                    <input type="number" class="input_campo" name="telefono" placeholder="Ingresa tu telefono" required>
                     <hr>
                 </div>
             </div>
@@ -199,12 +199,12 @@
                     <i class="fas fa-at icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="email" class="input_campo" name="emailNutricionista" placeholder="Ingresa tu email" required>
+                    <input type="email" class="input_campo" name="email" placeholder="Ingresa tu email" required>
                     <hr>
                 </div>
             </div>
             <div class="submit">
-                <input type="submit" class="input_submit" value="ENVIAR DATOS DE NUTRICIONISTA">
+                <input type="submit" class="input_submit" name="nutricionista" value="ENVIAR DATOS DE NUTRICIONISTA">
             </div>
         </div>
     </form>
