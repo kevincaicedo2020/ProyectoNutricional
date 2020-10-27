@@ -6,7 +6,7 @@ body{
     width: 100%;
     height: 500px;
     overflow-x: hidden;
-    background-image: url(../Img/donfo01.jpg);
+    background-image: url(../Img/frutasfondo.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -120,9 +120,8 @@ a:hover {
 .contenedor-pesoIdeal{
     width: 35%;
     margin: 50px 550px;
-    border: 2px solid #fb5607;
     border-radius: 15px;
-    background: #d3d3d39d;
+    background: #75747477;
 }
 
 .contenedor-pesoIdeal h2{
@@ -165,8 +164,8 @@ input[type="text"]{
 }
 
 #resultado-peso span{
-    color: blue;
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 25px;
     font-weight: bold;
     font-family: 'Lato', sans-serif;
 }
@@ -204,4 +203,5 @@ input[type="submit"]:hover{
 
 .table tr td{
     font-weight: bold;
+    background: #75747477;
 }
