@@ -9,6 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css/loginYregistrop.css" type="text/css" >
+    <!-- ARCHIVOS PARA HACER LAS VALIDACIONES DE DATOS EN LOS FORMUALRIOS -->
+    <script src="../Js/Jquery.js"></script>
+    <script src="../Js/validacionesDatos.js" ></script>
+
 </head>
 <body>
 
@@ -69,7 +73,7 @@
                     <i class="fas fa-id-card icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="cedulaPaciente" placeholder="Ingresa tu cedula" required>
+                    <input type="number" class="input_campo" id="cedulaPaciente" name="cedulaPaciente" placeholder="Ingresa tu cedula" required=""   >
                     <hr>
                 </div>
             </div>
@@ -78,7 +82,7 @@
                     <i class="fas fa-bookmark icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="text" class="input_campo" name="nombrePaciente" placeholder="Ingresa tu nombre" required>
+                    <input type="text" class="input_campo" id="nombrePaciente"name="nombrePaciente" placeholder="Ingresa tu nombre"  required=""  >
                     <hr>
                 </div>
             </div>    
@@ -87,7 +91,7 @@
                     <i class="fas fa-list-ol icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="edadPaciente" placeholder="Ingresa tu edad" required>
+                    <input type="number" class="input_campo" id="edadPaciente" name="edadPaciente" placeholder="Ingresa tu edad" required="" >
                     <hr>
                 </div>
             </div>
@@ -106,7 +110,7 @@
                     <i class="fas fa-tty icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="telefonoPaciente" placeholder="Ingresa tu telefono" required>
+                    <input type="number" class="input_campo" id="telefonoPaciente" name="telefonoPaciente" placeholder="Ingresa tu telefono" required="" >
                     <hr>
                 </div>
             </div>
@@ -115,7 +119,7 @@
                     <i class="fas fa-at icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="email" class="input_campo" name="emailPaciente" placeholder="Ingresa tu email" required>
+                    <input type="email" class="input_campo" name="emailPaciente" placeholder="Ingresa tu email" required="" >
                     <hr>
                 </div>
             </div>
@@ -124,7 +128,7 @@
                     <i class="fas fa-weight icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="pesoPaciente" placeholder="Ingresa tu peso(Kg)" required>
+                    <input type="number" class="input_campo" name="pesoPaciente" placeholder="Ingresa tu peso(Kg)" required=""   >
                     <hr>
                 </div>
             </div>
@@ -133,12 +137,12 @@
                     <i class="far fa-calendar-alt icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" step="0.01" name="estaturaPaciente" placeholder="Ingresa tu estatura(m)" required>
+                    <input type="number" class="input_campo" step="0.01" name="estaturaPaciente" placeholder="Ingresa tu estatura(m)" required=""  >
                     <hr>
                 </div>
             </div>
             <div class="submit">
-                <input type="submit" class="input_submit" value="ENVIAR DATOS DE PACIENTE">
+                <input type="submit" class="input_submit" id="enviar-datos" name="enviar-datos" value="ENVIAR DATOS DE PACIENTE">
             </div>
         </form>
     </div>
@@ -152,7 +156,7 @@
                     <i class="fas fa-id-card icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="cedulaNutricionista" placeholder="Ingresa tu cedula" required>
+                    <input type="number" class="input_campo" id="cedulaNutricionista" name="cedulaNutricionista" placeholder="Ingresa tu cedula"  required="">
                     <hr>
                 </div>
             </div>
@@ -189,7 +193,7 @@
                     <i class="fas fa-tty icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="telefonoNutricionista" placeholder="Ingresa tu telefono" required>
+                    <input type="number" class="input_campo" id="telefonoNutricionista" name="telefonoNutricionista" placeholder="Ingresa tu telefono" required>
                     <hr>
                 </div>
             </div>
