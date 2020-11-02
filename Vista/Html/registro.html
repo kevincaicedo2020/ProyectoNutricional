@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registro</title>
+    <link rel="stylesheet" href="../Css/normalize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css/loginYregistrop.css" type="text/css" >
+    <!-- ARCHIVOS PARA HACER LAS VALIDACIONES DE DATOS EN LOS FORMUALRIOS -->
+    <script src="../Js/Jquery.js"></script>
+    <script src="../Js/validacionesDatos.js" ></script>
+
 </head>
 <body>
 
-
-    
-
-    
     <div class="foto_registro">
-
-
-                        <!-- MENU -->
+    <!-- MENU -->
                 <nav id="navegacion">
                     <div id="menutoogle">
                         <input type="checkbox" />
@@ -27,16 +26,20 @@
                         <span></span>
                         <ul id="menu">
                             <p class="centradop">CUIDAMOS DE TI</p>
-                            <a href="panelpaciente.html">
-                                <li> <i class="fas fa-2x fa-male"> </i> Tabla de IMC</li></a>
+                            <a href="registro.html">
+                                <li> <i class="fas fa-2x fa-male"> </i> Registro de nuevo Usuario</li></a>
+                            <a href="editarDatos.html">
+                                <li> <i class="fas fa-2x fa-user-edit"></i> Editar datos de Usuario</li></a>
+                            <a href="asignacionPlanNutricional.html">
+                                <li> <i class="far fa-2x fa-clipboard"> </i> Crear Plan Nutricional</li></a>
+                            <a href="tabProteinas-nutricionista.html">
+                                <li> <i class="fas fa-2x fa-apple-alt"> </i> Tablas de Proteinas</li></a>
+                            <a href="IMC-nutricionista.html">
+                                <li> <i class="fas fa-2x fa-male"> </i> </i> Tablas de IMC</li></a>
+                            <a href="PesoNutricionista.html">
+                            <li> <i class="fas fa-2x fa-child"></i> Peso Ideal</li></a>
                             <a href="#">
-                                <li> <i class="far fa-2x fa-clipboard"> </i> Plan Nutricional Asignado</li></a>
-                            <a href="pesoIdeal.html">
-                                <li> <i class="fas fa-2x fa-heartbeat"> </i> Peso Ideal</li></a>
-                            <a href="proteinasdiarias.html">
-                                <li> <i class="fas fa-2x fa-apple-alt"> </i> Proteinas Diarias</li></a>
-                            <a href="#">
-                                <li> <i class="far fa-2x fa-times-circle"> </i> CIERRE DE SESION </li></a>
+                            <li> <i class="far fa-2x fa-times-circle"> </i> CIERRE DE SESION </li></a>
                         </ul>
                     </div>
                 </nav>
@@ -70,7 +73,7 @@
                     <i class="fas fa-id-card icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="cedula" placeholder="Ingresa tu cedula" required>
+                    <input type="number" class="input_campo" id="cedulaPaciente" name="cedulaPaciente" placeholder="Ingresa tu cedula" required=""   >
                     <hr>
                 </div>
             </div>
@@ -79,7 +82,7 @@
                     <i class="fas fa-bookmark icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="text" class="input_campo" name="nombre" placeholder="Ingresa tu nombre" required>
+                    <input type="text" class="input_campo" id="nombrePaciente"name="nombrePaciente" placeholder="Ingresa tu nombre"  required=""  >
                     <hr>
                 </div>
             </div>    
@@ -88,7 +91,7 @@
                     <i class="fas fa-list-ol icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="edad" placeholder="Ingresa tu edad" required>
+                    <input type="number" class="input_campo" id="edadPaciente" name="edadPaciente" placeholder="Ingresa tu edad" required="" >
                     <hr>
                 </div>
             </div>
@@ -107,7 +110,7 @@
                     <i class="fas fa-tty icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="telefono" placeholder="Ingresa tu telefono" required>
+                    <input type="number" class="input_campo" id="telefonoPaciente" name="telefonoPaciente" placeholder="Ingresa tu telefono" required="" >
                     <hr>
                 </div>
             </div>
@@ -116,7 +119,7 @@
                     <i class="fas fa-at icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="email" class="input_campo" name="email" placeholder="Ingresa tu email" required>
+                    <input type="email" class="input_campo" name="emailPaciente" placeholder="Ingresa tu email" required="" >
                     <hr>
                 </div>
             </div>
@@ -125,7 +128,7 @@
                     <i class="fas fa-weight icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="peso" placeholder="Ingresa tu peso(Kg)" required>
+                    <input type="number" class="input_campo" name="pesoPaciente" placeholder="Ingresa tu peso(Kg)" required=""   >
                     <hr>
                 </div>
             </div>
@@ -134,12 +137,12 @@
                     <i class="far fa-calendar-alt icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" step="0.01" name="estatura" placeholder="Ingresa tu estatura(m)" required>
+                    <input type="number" class="input_campo" step="0.01" name="estaturaPaciente" placeholder="Ingresa tu estatura(m)" required=""  >
                     <hr>
                 </div>
             </div>
             <div class="submit">
-                <input type="submit" class="input_submit" name="paciente" value="ENVIAR DATOS DE PACIENTE">
+                <input type="submit" class="input_submit" id="enviar-datos" name="enviar-datos" value="ENVIAR DATOS DE PACIENTE">
             </div>
         </form>
     </div>
@@ -153,7 +156,7 @@
                     <i class="fas fa-id-card icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="cedula"  placeholder="Ingresa tu cedula" required>
+                    <input type="number" class="input_campo" id="cedulaNutricionista" name="cedulaNutricionista" placeholder="Ingresa tu cedula"  required="">
                     <hr>
                 </div>
             </div>
@@ -190,7 +193,7 @@
                     <i class="fas fa-tty icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="telefono" placeholder="Ingresa tu telefono" required>
+                    <input type="number" class="input_campo" id="telefonoNutricionista" name="telefonoNutricionista" placeholder="Ingresa tu telefono" required>
                     <hr>
                 </div>
             </div>

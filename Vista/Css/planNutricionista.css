@@ -1,0 +1,207 @@
+
+/*****************  CALCULADORA DE PROTEINAS DIARIAS  ****************************/
+.proteinas{
+    clear: both;
+    width: 40%;
+    float: right;
+    margin: 15px 25%;
+    border-radius: 20px;
+    background: #75747477;;
+}  
+
+.proteinas h2{
+    text-align: center;
+    font-family: 'Belleza', sans-serif;
+}
+
+.contenedor-proteinas{
+    width: 70%;
+    margin: 5px;
+    padding: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+input[type="text"]{
+    width: 40%;
+    margin-bottom: 15px;
+    margin-left: 40px;
+    padding: 4px 55px;
+    border-radius: 15px;
+    border: none; 
+}
+
+#opcion{
+    width: 60%;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+
+select{
+    margin: 10px 20px;
+    padding: 4px 75px;
+}
+
+.resultado-gramos{
+    margin: 20px 0;
+    font-family: 'Lato', sans-serif;
+}
+
+input[type="button"]{
+    margin: 15px 30%;
+    padding: 8px 70px;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    background: #2AC10F;
+}
+input[type="button"]:hover{
+    background: #ffffff;
+}
+
+#resul-gramos span{
+    color: #0c33b4;
+    font-weight: bold;
+    font-size: 23px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+/*********************    CALCULADORA IMC  panel del nutricionista    *****************************/
+
+.cuadroimc{
+    width: 74%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container{
+    width: 45%;
+    margin-top: 2%;
+    border-radius: 10px;
+    background: #75747477;
+    margin: 8px;
+}      
+.imc-title h1{
+    text-align: center;
+}
+
+input[type="number"]{
+    width: 60%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+.form-group{
+    margin: 8px 5px;
+}
+
+.botones2{
+    margin: 20px;
+    text-align: center;
+}
+
+.btn{
+    padding: 5px 40px;
+    border-radius: 50px;
+    border: none;
+    background: #2AC10F;
+}
+
+.btn:hover{
+    background: #ffffff;
+}
+/**************************    TABLA DE IMC DATOS del panel nutricionista   ***************************************/
+
+.tab-peso{
+    width: 50%;
+    margin: 25px auto;
+}   
+
+.tab-peso table{
+    width: 100%;
+}
+
+.tab-encabezado tr th{
+    padding: 15px 0;
+    background: #2AC10F;
+}
+
+.tab-datos tr td{
+    padding: 5px 0;
+    text-align: center;
+    font-family: 'Belleza', sans-serif;
+    font-weight: bold;
+    background: #75747477;
+}
+
+
+
+/*******************************     PESO IDEAL   panel nutricionista     ******************************/
+.contenedor-pesoIdeal{
+    width: 45%;
+    margin: 50px 250px;
+    border-radius: 15px;
+    background: #75747477;
+}
+
+.contenedor-pesoIdeal h2{
+    text-align: center;
+    font-family: 'Belleza', sans-serif;
+}
+
+.datos-persona{
+    width: 80%;
+    margin: 30px auto;
+    padding: 15px 0;
+}
+
+input[type="text"]{
+    width: 60%;
+    margin: 10px 0;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+    font-family: 'Lato', sans-serif;
+}
+
+#edad{
+    margin-left: 45px;
+    font-family: 'Lato', sans-serif;
+}
+
+#opcion{
+    margin-left: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+#opcion{
+    width: 60%;
+    margin-top: 15px;
+    padding: 6px 0;
+    border-radius: 8px;
+    border: none;
+}
+
+#resultado-peso span{
+    color: blue;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+}
+
+input[type="submit"]{
+    margin: 15px 30%;
+    padding: 6px 60px;
+    border: none;
+    border-radius: 15px;
+    background: #2AC10F;
+}
+
+input[type="submit"]:hover{
+    background: #ffffff;
+}

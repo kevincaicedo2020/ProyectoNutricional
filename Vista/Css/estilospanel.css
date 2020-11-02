@@ -5,7 +5,7 @@ body{
     clear: both;
     width: 100%;
     overflow-x: hidden;
-    background-image: url(../Img/donfo01.jpg);
+    background-image: url(../Img/frutasfondo.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -127,9 +127,8 @@ a:hover {
 .container{
     width: 45%;
     margin-top: 2%;
-    border: 2px solid #fb5607;
     border-radius: 10px;
-    background: #d3d3d39d;
+    background: #75747477;
     margin: 8px;
 }      
 .imc-title h1{
@@ -167,6 +166,7 @@ input[type="number"]{
 .tab-peso{
     width: 50%;
     margin: 25px auto;
+    background: #75747477;
 }   
 
 .tab-peso table{
@@ -175,13 +175,14 @@ input[type="number"]{
 
 .tab-encabezado tr th{
     padding: 15px 0;
-    background: #0f80aa;
+    background: #aacc00;
 }
 
 .tab-datos tr td{
     padding: 5px 0;
     text-align: center;
     font-family: 'Belleza', sans-serif;
+    border-bottom: 1px solid #fff;
 }
 
 
@@ -189,10 +190,9 @@ input[type="number"]{
 .elimc{
     width: 45%;
     margin: 0 10px;
-    border: 2px solid #fb5607;
     border-radius: 10px;
     font-family: 'Belleza', sans-serif;
-    background: #d3d3d39d;
+    background: #7e7e7eab;
 }
 .elimc h3{
     text-align: center;
@@ -210,9 +210,8 @@ input[type="number"]{
     width: 40%;
     float: right;
     margin: 90px 15%;
-    border: 2px solid #fb5607;
     border-radius: 20px;
-    background: #d3d3d39d;
+    background: #75747477;
 }  
 
 .proteinas h2{
@@ -265,7 +264,7 @@ input[type="button"]:hover{
 }
 
 #resul-gramos span{
-    color: #0c33b4;
+    color: #ffffff;
     font-weight: bold;
     font-size: 23px;
     font-family: 'Lato', sans-serif;

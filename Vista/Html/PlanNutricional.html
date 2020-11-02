@@ -10,9 +10,15 @@
     <link rel="icon" type="image/png" href="../Img/logo5.png" />
     <!-- para los iconos automaticamente de la red se enlasan   -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <!-- PESO IDEAL -->
+
+    <!-- TABLA QUE EL PACIENTE PODRA VER -->
+    <link href="../Css/bootstrap.min.css" rel="stylesheet" />
     <script src="../Js/Jquery.js"></script>
-    <script src="../Js/pesoIdeal-planNutricional.js"></script>
+    <script src="../Js/bootstrap.min.js"></script>
+
+ 
+
+
 
 </head>
 <body>
@@ -39,36 +45,48 @@
     </div>
 </nav>
 
-<!-- PESO IDEAL DE UNA PERSONA -->
-<div class="contenedor-pesoIdeal">
-    <h2>CALCULA TU PESO IDEAL</h2>
-    <div class="datos-persona">
-        <label for="estatura">Estatura (m):</label>
-        <input type="text" id="estatura" name="estatura" placeholder="ejemplo 165"> <br>
+<div class="contenedor-tabla-datos">
+    <h2>Plan nutricional Asignado</h2>
 
-        <label for="edad">Edad:</label>
-        <input type="text" id="edad" name="edad" placeholder="ejemplo 23"> <br>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">DATOS</th>
+            <th scope="col">RESULTADO</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Calorias Diarias</td>
+            <td>..............</td>
+          </tr>
+          <tr>
+            <td>Proteinas Diarias</td>
+            <td>.........</td>
+          </tr>
+          <tr>
+            <td>Grasa Diarias</td>
+            <td>...........</td>
+          </tr>
+          <tr>
+            <td>Carboidrato Diarios</td>
+            <td>...........</td>
+          </tr>
+          <tr>
+            <td>Indice de Masa Corporal</td>
+            <td>.............</td>
+          </tr>
+        </tbody>
+      </table>
+      
+    <a href="../Html/Aliemtos calorias.pdf" target="_blank"> <input type="submit" value="Calorias en Alimentos"> </a>
 
-        <label for="contextura">Contextura:</label>
-        <select name="opcion" id="opcion">
-            <option value="1">Delgado</option>
-            <option value="2">Normal</option>
-            <option value="3">Ancho</option>
-        </select> <br>
-
-            <p id="resultado-peso">
-                El peso Ideal: <span>  ......  </span> Kg
-            </p>
 
 
 
-        <input type="submit" value="Calcular" id="calcular">
-
-
-
-    </div>
 </div>
 
+  
 
 
 
