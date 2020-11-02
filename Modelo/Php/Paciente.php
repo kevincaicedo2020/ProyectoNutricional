@@ -7,7 +7,7 @@ class Paciente extends Usuario{
     use \Modelo\Php\BD_Nutricion;
     public $pesoKg = 0;
     public $alturaM = 0;
-
+    private $contraseña =""; 
     public function __construct(int $dniUsuario, string $nombreUsuario, int $edadUsuario, string $sexoUsuario, int $telefonoUsuario, string $emailUsuario
     ,int $pesoKg, float $alturaM)
     {

@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Css/loginYregistrop.css" type="text/css">
+    <link rel="stylesheet" href="../Css/loginYregistroñ.css" type="text/css">
     
 </head>
 <body>
@@ -36,18 +36,18 @@
                 <h2 class="texto_lista2">BIENVENIDO</h2>
             </div>
     <div class="formulario">
-        <form action="#" method="POST">         <!--colocar el archivo para enviar los datos-->
+        <form action="../../Controlador/Php/Mlogin_usuario.php/" method="POST">        
             
             <div class="campo_user">
                 <div class="icon_user">
-                    <input type="radio" name="tipo_cliente" id="nutricionista">
+                    <input type="radio" name="tipo_cliente" value="tipo_nutricionista" id="nutricionista" required>
                     <label for="nutricionista">
                     <i class="fas fa-user-md iconos"></i>
                     </label>
                     <i class="fas fa-check hola1"></i>
                 </div>
                 <div class="icon_user">
-                    <input type="radio" name="tipo_cliente" id="paciente">
+                    <input type="radio" name="tipo_cliente" value="tipo_paciente" id="paciente" required>
                     <label for="paciente">
                     <i class="fas fa-user iconos"></i>
                     </label>
@@ -70,15 +70,15 @@
                     <i class="fas fa-lock icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="password" class="input_campo" name="contrasena" placeholder="Ingresa tu contraseña" minlength="6" required>
+                    <input type="password" class="input_campo" name="contrasena" placeholder="Ingresa tu contraseña" minlength="4" required>
                     <hr>
                 </div>
             </div>
 
             <div class="submit">
-                <input type="submit" class="input_submit" value="ENVIAR">
+                <input type="submit" class="input_submit" name="login" value="ENVIAR">
             </div>
-            <a href="restablecerContra.html" id="olvidarContraseña">¿Olvidaste tu contraseña?</a>
+            <a href="restablecerContra.html" id="olvidarContraseña">¿Restablecer tu contraseña?</a>
             
         </form>
     </div>
