@@ -27,7 +27,7 @@ trait BD_Nutricion{
         if(isset($tipoUsuario) && !empty($tipoUsuario)){
             global $cedula,$nombre,$edad,$sexo,$telefono,$email;
 
-            if((strlen(trim($cedula))==10) && (strlen(trim($nombre))>0) && (strlen(trim($edad))>0) && (strlen(trim($sexo))>0) && (strlen(trim($telefono))==10) && (strlen(trim($email))>0) && (strlen(trim($email))>0 && is_numeric($cedula) && is_string($nombre) && is_numeric($edad) && is_string($sexo) && is_numeric($telefono) && is_string($email)))
+            if((strlen(trim($cedula))==10) && (strlen(trim($nombre))>0) && (strlen(trim($edad))>0) && (strlen(trim($sexo))>0) && (strlen(trim($telefono))>=9) && (strlen(trim($email))>0) && is_numeric($cedula) && is_string($nombre) && is_numeric($edad) && is_string($sexo) && is_numeric($telefono) && is_string($email))
             {                
                 //en esto ya estaria validado los datos de Nutricionista
 
@@ -36,17 +36,17 @@ trait BD_Nutricion{
                     if( (strlen(trim($peso))>0) && (strlen(trim($estatura))>0) && is_numeric($peso) && is_float($estatura)){
                         //en esto ya estaria validado los datos de Paciente
                     }else{
-                        header('location: ../../Vista/Html/registro.html');
+                        header('location: ../../Vista/Html/registro.php');
                         die();
                     }
                 }
             }
             else{
-                header('location: ../../Vista/Html/registro.html');
+                header('location: ../../Vista/Html/registro.php');
                 die();
             }
         }else{
-            header('location: ../../Vista/Html/registro.html');
+            header('location: ../../Vista/Html/registro.php');
             die();
         }
     }
@@ -118,6 +118,7 @@ trait BD_Nutricion{
             global $cedula, $nombre, $edad, $sexo, $telefono, $email, $peso, $estatura;
             // AQUI AL MOMENTO EN QUE EL NUTRICIONISTA SE LOGEA DEBO AGREGAR SU ID EN UNA VARIABLE SESION PARA PONER SU ID EN EL '1' DE LA LINEA 50
             $this->consulta="insert into paciente(DNIpaciente,nombrePaciente,edadPaciente,sexoPaciente,telefonoPaciente,emailPaciente,fechaActualPaciente,IDnutricionista,pesoPaciente,estaturaPaciente) values (".$cedula.",'".$nombre."',".$edad.",'".$sexo."',".$telefono.",'".$email."',CURDATE(),".(int) $_SESSION['IDnutricionista'].",".$peso.",".$estatura.");";
+
         }elseif($tipoUsuario == "ENVIAR DATOS DE NUTRICIONISTA"){
             global $cedula,$nombre,$edad,$sexo,$telefono,$email;
             $this->consulta="insert into nutricionista(DNINutricionista,nombreNutricionista,edadNutricionista,sexoNutricionista,telefonoNutricionista,emailNutricionista,fechaActualNutricionista) values (".$cedula.",'".$nombre."',".$edad.",'".$sexo."',".$telefono.",'".$email."',CURDATE());";

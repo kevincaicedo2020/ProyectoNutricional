@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if( !empty($_SESSION['IDnutricionista']) ):
+    
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -206,3 +214,12 @@
     </div>
 </body>
 </html>
+<?php
+
+elseif( !empty($_SESSION['IDpaciente']) ):
+    header('location: /ProyectoNutricional/Vista/Html/pesoIdeal.html');
+    die();
+else:
+    header('location: /ProyectoNutricional/Vista/Html/login.php');
+endif;
+?>

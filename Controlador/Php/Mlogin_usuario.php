@@ -31,7 +31,7 @@ if(isset($_POST['login']) && $codigo=="ENVIAR"){
             if($tipo_cliente == "tipo_nutricionista")
             {
                 $_SESSION['IDnutricionista'] = $valor['IDnutricionista'];
-                header('location: /ProyectoNutricional/Vista/Html/registro.html');
+                header('location: /ProyectoNutricional/Vista/Html/registro.php');
             }
             elseif($tipo_cliente == "tipo_paciente")
             {
@@ -46,18 +46,18 @@ if(isset($_POST['login']) && $codigo=="ENVIAR"){
         }else{
             mysqli_free_result($resultado);
             mysqli_close($conexion);
-            header('location:/ProyectoNutricional/Vista/Html/login.html');
+            header('location:/ProyectoNutricional/Vista/Html/login.php');
             die();
         }
     }else{
-        header('location:/ProyectoNutricional/Vista/Html/login.html');
+        header('location:/ProyectoNutricional/Vista/Html/login.php');
         die();
     }
   
 }
 elseif(isset($_POST['login']) && $codigo=="RECIBIR GMAIL"){
     Paciente::enviar_correo_restablecer_contraseña($email);
-    header('location: /ProyectoNutricional/Vista/Html/login.html');
+    header('location: /ProyectoNutricional/Vista/Html/login.php');
 }
 elseif(isset($_POST['login']) && $codigo=="RESTABLECER CONTRASEÑA"){
 //      ESTA PARTE NO SE COMO SOLUCIONARLA 
@@ -71,7 +71,7 @@ elseif(isset($_POST['login']) && $codigo=="RESTABLECER CONTRASEÑA"){
     
     $resultado=mysqli_query($conexion,$consulta);
     if($resultado){
-        header('Refresh:1;url=/ProyectoNutricional/Vista/Html/login.html');
+        header('Refresh:1;url=/ProyectoNutricional/Vista/Html/login.php');
     }
     else{
         header('location: https://mail.google.com/');
@@ -81,7 +81,7 @@ elseif(isset($_POST['login']) && $codigo=="RESTABLECER CONTRASEÑA"){
     
 }
 else{
-    header('location:/ProyectoNutricional/Vista/Html/login.html');
+    header('location:/ProyectoNutricional/Vista/Html/login.php');
     die();
 }
 

@@ -11,7 +11,7 @@ use Modelo\Php\Nutricionista;
     $sexo = (string) $_POST['sexo'];
     $telefono = (int) $_POST['telefono'];
     $email = (string) $_POST['email'];
-
+    
     
         if(isset($_POST['paciente'])){
             $peso = (int) $_POST['peso'];
@@ -22,7 +22,7 @@ use Modelo\Php\Nutricionista;
             $INSpaciente->validarDatos($paciente);
             $INSpaciente->enviar_correo_restablecer_contraseña($email);
             $resultado = mysqli_query($conexion,$INSpaciente->consulta_para_insertar_usuarios($paciente));
-            $INSpaciente->ver_si_conexion_BD_fue_exitosa($resultado,"registro.html");
+            $INSpaciente->ver_si_conexion_BD_fue_exitosa($resultado,"registro.php");
             $INSpaciente->cerrar_a_la_BD($resultado,$conexion);
             //me faltaria saber si 
             
@@ -36,13 +36,10 @@ use Modelo\Php\Nutricionista;
             $INSnutricionista->validarDatos($nutricionista);
             $INSnutricionista->enviar_correo_restablecer_contraseña($email);
             $resultado = mysqli_query($conexion,$INSnutricionista->consulta_para_insertar_usuarios($nutricionista));
-            $INSnutricionista->ver_si_conexion_BD_fue_exitosa($resultado,"registro.html");
+            $INSnutricionista->ver_si_conexion_BD_fue_exitosa($resultado,"registro.php");
             $INSnutricionista->cerrar_a_la_BD($resultado,$conexion);
             
-        }else{
-            
         }
-    
        
 
 ?>

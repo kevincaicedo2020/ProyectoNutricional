@@ -1,3 +1,15 @@
+
+<?php
+session_start();
+if( !empty($_SESSION['IDnutricionista']) ):
+    header('location: registro.php');
+    die();
+elseif( !empty($_SESSION['IDpaciente']) ):
+    header('location: /ProyectoNutricional/Vista/Html/pesoIdeal.html');
+    die();
+else:
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +35,7 @@
                     <li><a href="index.html">INICIO</a></li>
                     <li><a href="retos.html">SERVICIO</a></li>
                     <li><a href="contacto.html">CONTACTO</a></li>
-                    <li class="ultimo"><a href="login.html">LOGIN</a></li>
+                    <li class="ultimo"><a href="login.php">LOGIN</a></li>
                 </ul>
             </nav>
         </div>
@@ -86,3 +98,6 @@
     </div>
 </body>
 </html>
+<?php
+endif;
+?>
