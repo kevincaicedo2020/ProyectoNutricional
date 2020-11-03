@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../Css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Css/loginYregistrop.css" type="text/css">
+    <link rel="stylesheet" href="../Css/loginYregistroñ.css" type="text/css">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
                 <li><a href="index.html">INICIO</a></li>
                 <li><a href="retos.html">SERVICIO</a></li>
                 <li><a href="contacto.html">CONTACTO</a></li>
-                <li class="ultimo"><a href="login.html">LOGIN</a></li>
+                <li class="ultimo"><a href="login.php">LOGIN</a></li>
             </ul>
         </nav>
     </div>
@@ -36,7 +36,7 @@
                 <h2 class="texto_lista2">INGRESE SU CORREO ELECTRONICO</h2>
             </div>
     <div class="formulario">
-        <form action="#" method="POST">         <!--colocar el archivo para enviar los datos-->
+        <form action="../../Controlador/Php/Mlogin_usuario.php" method="POST">         <!--colocar el archivo para enviar los datos-->
     
             <div class="campo">
                 <div class="icon">
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="submit">
-                <input type="submit" class="input_submit" value="RECIBIR GMAIL">
+                <input type="submit" class="input_submit" name="login" value="RECIBIR GMAIL">
             </div>
             <a href="login.html" id="olvidarContraseña">Ingresar a la cuenta</a>
             

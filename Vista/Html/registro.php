@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if( !empty($_SESSION['IDnutricionista']) ):
+    
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Gayathri&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Lato:wght@300&family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Css/loginYregistrop.css" type="text/css" >
+    <link rel="stylesheet" href="../Css/loginYregistroñ.css" type="text/css" >
     <!-- ARCHIVOS PARA HACER LAS VALIDACIONES DE DATOS EN LOS FORMUALRIOS -->
     <script src="../Js/Jquery.js"></script>
     <script src="../Js/validacionesDatos.js" ></script>
@@ -17,7 +25,7 @@
 <body>
 
     <div class="foto_registro">
-    <!-- MENU -->
+                        <!-- MENU -->
                 <nav id="navegacion">
                     <div id="menutoogle">
                         <input type="checkbox" />
@@ -38,12 +46,12 @@
                                 <li> <i class="fas fa-2x fa-male"> </i> </i> Tablas de IMC</li></a>
                             <a href="PesoNutricionista.html">
                             <li> <i class="fas fa-2x fa-child"></i> Peso Ideal</li></a>
-                            <a href="#">
+                            <a href="../../Modelo/Php/cierresession.php">
                             <li> <i class="far fa-2x fa-times-circle"> </i> CIERRE DE SESION </li></a>
+                            
                         </ul>
                     </div>
                 </nav>
-
 
 
         <div class="centar_contenido cuadro_extra">
@@ -67,13 +75,13 @@
 
             <div class="seccion_paciente">
             <div class="formulario">
-            <form action="../../Controlador/Php/Main.php" method="POST">
+            <form action="../../Controlador/Php/Mregistros_usuario.php" method="POST">
             <div class="campo">
                 <div class="icon">
                     <i class="fas fa-id-card icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" id="cedulaPaciente" name="cedulaPaciente" placeholder="Ingresa tu cedula" required=""   >
+                    <input type="number" class="input_campo" name="cedula"  placeholder="Ingresa tu cedula" pattern="[0-9]+" required>
                     <hr>
                 </div>
             </div>
@@ -82,7 +90,7 @@
                     <i class="fas fa-bookmark icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="text" class="input_campo" id="nombrePaciente"name="nombrePaciente" placeholder="Ingresa tu nombre"  required=""  >
+                    <input type="text" class="input_campo" name="nombre" placeholder="Ingresa tu nombre" pattern="[A-Za-z]+" required>
                     <hr>
                 </div>
             </div>    
@@ -91,7 +99,7 @@
                     <i class="fas fa-list-ol icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" id="edadPaciente" name="edadPaciente" placeholder="Ingresa tu edad" required="" >
+                    <input type="number" class="input_campo" name="edad" max="200" placeholder="Ingresa tu edad" pattern="[0-9]+" required>
                     <hr>
                 </div>
             </div>
@@ -110,7 +118,7 @@
                     <i class="fas fa-tty icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" id="telefonoPaciente" name="telefonoPaciente" placeholder="Ingresa tu telefono" required="" >
+                    <input type="number" class="input_campo" name="telefono" placeholder="Ingresa tu telefono" pattern="[0-9]+" required>
                     <hr>
                 </div>
             </div>
@@ -128,7 +136,7 @@
                     <i class="fas fa-weight icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="pesoPaciente" placeholder="Ingresa tu peso(Kg)" required=""   >
+                    <input type="number" class="input_campo" name="peso" placeholder="Ingresa tu peso(Kg)" pattern="[0-9]+" required>
                     <hr>
                 </div>
             </div>
@@ -137,7 +145,7 @@
                     <i class="far fa-calendar-alt icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" step="0.01" name="estaturaPaciente" placeholder="Ingresa tu estatura(m)" required=""  >
+                    <input type="number" class="input_campo" step="0.01" name="estatura" placeholder="Ingresa tu estatura(m)" pattern="[0-9]+" required>
                     <hr>
                 </div>
             </div>
@@ -150,13 +158,13 @@
 
         <div class="seccion_nutricionista">
                     <div class="formulario">
-                    <form action="../../Controlador/Php/Main.php" method="POST">
+                    <form action="../../Controlador/Php/Mregistros_usuario.php" method="POST">
             <div class="campo">
                 <div class="icon">
                     <i class="fas fa-id-card icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" id="cedulaNutricionista" name="cedulaNutricionista" placeholder="Ingresa tu cedula"  required="">
+                    <input type="number" class="input_campo" name="cedula"  placeholder="Ingresa tu cedula" pattern="[0-9]+" required>
                     <hr>
                 </div>
             </div>
@@ -165,7 +173,7 @@
                     <i class="fas fa-bookmark icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="text" class="input_campo" name="nombre" placeholder="Ingresa tu nombre" required>
+                    <input type="text" class="input_campo" name="nombre" placeholder="Ingresa tu nombre" pattern="[A-Za-z]+" required>
                     <hr>
                 </div>
             </div>    
@@ -174,7 +182,7 @@
                     <i class="fas fa-list-ol icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" name="edad" placeholder="Ingresa tu edad" required>
+                    <input type="number" class="input_campo" name="edad" placeholder="Ingresa tu edad" max="200" pattern="[0-9]+" required>
                     <hr>
                 </div>
             </div>
@@ -193,7 +201,7 @@
                     <i class="fas fa-tty icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="number" class="input_campo" id="telefonoNutricionista" name="telefonoNutricionista" placeholder="Ingresa tu telefono" required>
+                    <input type="number" class="input_campo" name="telefono" placeholder="Ingresa tu telefono" pattern="[0-9]+" required>
                     <hr>
                 </div>
             </div>
@@ -216,3 +224,12 @@
     </div>
 </body>
 </html>
+<?php
+
+elseif( !empty($_SESSION['IDpaciente']) ):
+    header('location: /ProyectoNutricional/Vista/Html/pesoIdeal.html');
+    die();
+else:
+    header('location: /ProyectoNutricional/Vista/Html/login.php');
+endif;
+?>
