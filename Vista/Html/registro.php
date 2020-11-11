@@ -1,10 +1,7 @@
 <?php
 session_start();
-
 if( !empty($_SESSION['IDnutricionista']) ):
     
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,21 +31,21 @@ if( !empty($_SESSION['IDnutricionista']) ):
                         <span></span>
                         <ul id="menu">
                             <p class="centradop">CUIDAMOS DE TI</p>
-                            <a href="registro.html">
+                            <a href="registro.php">
                                 <li> <i class="fas fa-2x fa-male"> </i> Registro de nuevo Usuario</li></a>
-                            <a href="editarDatos.html">
+                            <a href="editarDatos.php">
                                 <li> <i class="fas fa-2x fa-user-edit"></i> Editar datos de Usuario</li></a>
-                            <a href="asignacionPlanNutricional.html">
+                            <a href="asignacionPlanNutricional.php">
                                 <li> <i class="far fa-2x fa-clipboard"> </i> Crear Plan Nutricional</li></a>
-                            <a href="tabProteinas-nutricionista.html">
+                            <a href="tabProteinas-nutricionista.php">
                                 <li> <i class="fas fa-2x fa-apple-alt"> </i> Tablas de Proteinas</li></a>
-                            <a href="IMC-nutricionista.html">
+                            <a href="IMC-nutricionista.php">
                                 <li> <i class="fas fa-2x fa-male"> </i> </i> Tablas de IMC</li></a>
-                            <a href="PesoNutricionista.html">
+                            <a href="PesoNutricionista.php">
                             <li> <i class="fas fa-2x fa-child"></i> Peso Ideal</li></a>
                             <a href="../../Modelo/Php/cierresession.php">
                             <li> <i class="far fa-2x fa-times-circle"> </i> CIERRE DE SESION </li></a>
-                            
+                            <p class="nombre"> <i class="fas fa-file-signature nombre"></i> <?php echo 'Nombre de Usuario: '.$_SESSION['nombreNutricionista']; ?></p>
                         </ul>
                     </div>
                 </nav>
@@ -127,7 +124,7 @@ if( !empty($_SESSION['IDnutricionista']) ):
                     <i class="fas fa-at icono"></i>
                 </div>
                 <div class="campo_lista">
-                    <input type="email" class="input_campo" name="emailPaciente" placeholder="Ingresa tu email" required="" >
+                    <input type="email" class="input_campo" name="email" placeholder="Ingresa tu email" required>
                     <hr>
                 </div>
             </div>
@@ -150,7 +147,7 @@ if( !empty($_SESSION['IDnutricionista']) ):
                 </div>
             </div>
             <div class="submit">
-                <input type="submit" class="input_submit" id="enviar-datos" name="enviar-datos" value="ENVIAR DATOS DE PACIENTE">
+                <input type="submit" class="input_submit" id="enviar-datos" name="paciente" value="ENVIAR DATOS DE PACIENTE">
             </div>
         </form>
     </div>
@@ -225,9 +222,8 @@ if( !empty($_SESSION['IDnutricionista']) ):
 </body>
 </html>
 <?php
-
 elseif( !empty($_SESSION['IDpaciente']) ):
-    header('location: /ProyectoNutricional/Vista/Html/pesoIdeal.html');
+    header('location: /ProyectoNutricional/Vista/Html/panelpaciente.php');
     die();
 else:
     header('location: /ProyectoNutricional/Vista/Html/login.php');

@@ -6,9 +6,11 @@ body{
     width: 100%;
     height: 500px;
     overflow-x: hidden;
-    background-image: url(../Img/frutasfondo.jpg);
+    background-image: url(../Img/plato.jpg);
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ul {
@@ -118,7 +120,8 @@ a:hover {
 }
 /*******************************     PESO IDEAL        ******************************/
 .contenedor-pesoIdeal{
-    width: 35%;
+    height: 90vh;
+    width: 54%;
     margin: 50px 550px;
     border-radius: 15px;
     background: #75747477;
@@ -183,25 +186,30 @@ input[type="submit"]:hover{
 
 /***********************   CSS PANEL PLAN NUTRICIONAL PACIENTE        **************************/
 .contenedor-tabla-datos{
-    width: 50%;
+    width: 84%;
     margin-top: 50px;
-    margin-left: 550px;
+    margin-left: 227px;
 }
 
 .contenedor-tabla-datos h2{
     text-align: center;
     margin: 15px 0;
+    font-size: 2.5rem;
 }
 .contenedor-tabla-datos .table{
     width: 90%;
     margin: 0 auto;
 }
-
+.table{
+    margin-bottom: 100px !important;
+}
 .table .thead-dark{
     text-align: center;
 }
 
 .table tr td{
     font-weight: bold;
+    color: #ffffff;
+    text-align: center;
     background: #75747477;
 }

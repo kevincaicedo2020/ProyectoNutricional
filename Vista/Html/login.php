@@ -5,7 +5,7 @@ if( !empty($_SESSION['IDnutricionista']) ):
     header('location: registro.php');
     die();
 elseif( !empty($_SESSION['IDpaciente']) ):
-    header('location: /ProyectoNutricional/Vista/Html/pesoIdeal.html');
+    header('location: /ProyectoNutricional/Vista/Html/panelpaciente.php');
     die();
 else:
 
@@ -90,7 +90,7 @@ else:
             <div class="submit">
                 <input type="submit" class="input_submit" name="login" value="ENVIAR">
             </div>
-            <a href="restablecerContra.html" id="olvidarContraseña">¿Restablecer tu contraseña?</a>
+            <a href="restablecerContra.php" id="olvidarContraseña">¿Restablecer tu contraseña?</a>
             
         </form>
     </div>

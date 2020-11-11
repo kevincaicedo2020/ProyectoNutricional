@@ -1,3 +1,7 @@
+<?php
+session_start();
+if(!empty($_SESSION['IDpaciente'])):
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,16 +29,17 @@
         <span></span>
         <ul id="menu">
             <p class="centradop"> CUIDAMOS DE TI</p>
-            <a href="panelpaciente.html">
+            <a href="panelpaciente.php">
                 <li> <i class="fas fa-2x fa-male"> </i> Tabla de IMC</li></a>
-            <a href="PlanNutricional.html">
+            <a href="PlanNutricional.php">
                 <li> <i class="far fa-2x fa-clipboard"> </i> Plan Nutricional Asignado</li></a>
-            <a href="pesoIdeal.html">
+            <a href="pesoIdeal.php">
                 <li> <i class="fas fa-2x fa-heartbeat"></i> Peso Ideal</li></a>
-            <a href="proteinasdiarias.html">
+            <a href="proteinasdiarias.php">
                 <li> <i class="fas fa-2x fa-apple-alt"></i> Proteinas Diarias</li></a>
-            <a href="#">
+            <a href="../../Modelo/Php/cierresession.php">
                 <li> <i class="far fa-2x fa-times-circle"></i> CIERRE DE SESION  </li></a>
+                <p class="nombre"> <i class="fas fa-file-signature nombre"></i> <?php echo 'Nombre de Usuario: '.$_SESSION['nombrePaciente']; ?></p>
         </ul>
     </div>
 </nav>
@@ -64,3 +69,11 @@
 
 </body>
 </html>
+<?php
+    elseif(!empty($_SESSION['IDnutricionista'])):
+        header('location: /ProyectoNutricional/Vista/Html/registro.php');
+        die();
+    else:
+        header('location: /ProyectoNutricional/Vista/Html/login.php');
+    endif;
+?>

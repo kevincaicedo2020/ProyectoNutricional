@@ -1,3 +1,8 @@
+<?php
+session_start();
+if( !empty($_SESSION['IDnutricionista']) ):
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +17,9 @@
     <link rel="stylesheet" href="../Css/panelAdministrador.css">
     <link rel="stylesheet" href="../Css/planNutricionista.css">
 
-    <!-- archivos jquery para calcular IMC INDICE DE MASA CORPORAL panel nutricionista -->
+    <!-- archivos jquery para calcular las proteinas panel nutricionista -->
     <script src="../Js/Jquery.js"></script>
-    <script src="../Js/pesoIdeal-planNutricional.js"></script>
-
+    <script src="../Js/proteinasdiarias.js"></script>
 
 
 </head>
@@ -30,65 +34,55 @@
                         <span></span>
                         <ul id="menu">
                             <p class="centradop">CUIDAMOS DE TI</p>
-                            <a href="registro.html">
+                            <a href="registro.php">
                                 <li> <i class="fas fa-2x fa-male"> </i> Registro de nuevo Usuario</li></a>
-                            <a href="editarDatos.html">
+                            <a href="editarDatos.php">
                                 <li> <i class="fas fa-2x fa-user-edit"></i> Editar datos de Usuario</li></a>
-                            <a href="asignacionPlanNutricional.html">
+                            <a href="asignacionPlanNutricional.php">
                                 <li> <i class="far fa-2x fa-clipboard"> </i> Crear Plan Nutricional</li></a>
-                            <a href="tabProteinas-nutricionista.html">
+                            <a href="tabProteinas-nutricionista.php">
                                 <li> <i class="fas fa-2x fa-apple-alt"> </i> Tablas de Proteinas</li></a>
-                            <a href="IMC-nutricionista.html">
+                            <a href="IMC-nutricionista.php">
                                 <li> <i class="fas fa-2x fa-male"> </i> </i> Tablas de IMC</li></a>
-                            <a href="PesoNutricionista.html">
+                            <a href="PesoNutricionista.php">
                             <li> <i class="fas fa-2x fa-child"></i> Peso Ideal</li></a>
-                            <a href="#">
+                            <a href="../../Modelo/Php/cierresession.php">
                             <li> <i class="far fa-2x fa-times-circle"> </i> CIERRE DE SESION </li></a>
+                            <p class="nombre"> <i class="fas fa-file-signature nombre"></i> <?php echo 'Nombre de Usuario: '.$_SESSION['nombreNutricionista']; ?></p>
                         </ul>
                     </div>
                 </nav>
 
-
-
-
-
-
-<!-- PESO IDEAL DE UNA PERSONA -->
-<div class="contenedor-pesoIdeal">
-    <h2>CALCULA TU PESO IDEAL</h2>
-    <div class="datos-persona">
-        <label for="estatura">Estatura (m):</label>
-        <input type="text" id="estatura" name="estatura" placeholder="ejemplo 165"> <br>
-
-        <label for="edad">Edad:</label>
-        <input type="text" id="edad" name="edad" placeholder="ejemplo 23"> <br>
-
-        <label for="contextura">Contextura:</label>
+<!-- calculadora de proteinas diarias -->
+<div class="proteinas">
+    <h2>Proteinas Diarias</h2>
+    <div class="contenedor-proteinas">
+        <label for="peso">Peso(Kg):</label>
+        <input type="text" id="peso" name="peso" placeholder="ejemplo 54"> <br>
+        <label for="actividad">Actividad Fisica:</label>
         <select name="opcion" id="opcion">
-            <option value="1">Delgado</option>
-            <option value="2">Normal</option>
-            <option value="3">Ancho</option>
+            <option value="1">Sedentario</option>
+            <option value="2">Atletico</option>
+            <option value="3">Resistencia</option>
+            <option value="4">Fuerza</option>
         </select> <br>
-
-            <p id="resultado-peso">
-                El peso Ideal: <span>  ......  </span> Kg
+        <div class="resultado-gramos">
+            <p id="resul-gramos">
+                Proteinas Diarias: <span> ...... </span> gramos
             </p>
-
-
-
-        <input type="submit" value="Calcular" id="calcular">
-
-
-
+        </div>
     </div>
+    <input type="button" id="calcular" value="Calcular" >
+ 
 </div>
-
-
-
-
-
-
-
 
 </body>
 </html>
+<?php
+elseif( !empty($_SESSION['IDpaciente']) ):
+    header('location: /ProyectoNutricional/Vista/Html/panelpaciente.php');
+    die();
+else:
+    header('location: /ProyectoNutricional/Vista/Html/login.php');
+endif;
+?>

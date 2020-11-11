@@ -108,19 +108,21 @@ a {
 
   /******************    PARTE DEL LOS DATOS A EDITAR       **************/
 .contenedor-global{
-    width: 55%;
-    margin-right: 180px;
+    width: 60%;
+    margin-right: 110px;
     margin-bottom: 5px;       
     padding: 15px;
     border-radius: 15px;
     background: #75747477;
 }
 
-.buscar-usuario input[type="text"]{
-    width: 20%;
+
+.buscar-usuario input[type="number"]{
+    width: 40%;
     margin: 3px 0;
     padding: 5px 10px;
     border-radius: 15px;
+    text-align: center;
     border: none;
 }
 
@@ -130,6 +132,7 @@ a {
     border-radius: 15px;
     border: none;
     background: #2AC10F;
+    width: 30%;
 }
 
 .buscar-usuario input[type="submit"]:hover{
@@ -138,13 +141,14 @@ a {
 
 /********* DATOS DENTRO DEL FILESET   *************/
 .informacion-editar{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     padding: 5px 8px;
 }
 
 fieldset input[type="number"]{
-    width: 50%;
+  text-align: center;
+    width: 83%;
     margin: 15px 0;
     padding: 5px 10px;
     border-radius: 15px;
@@ -152,7 +156,8 @@ fieldset input[type="number"]{
 }
 
 fieldset input[type="text"]{
-    width: 50%;
+  text-align: center;
+    width: 83%;
     margin: 15px 0;
     padding: 5px 10px;
     border-radius: 15px;
@@ -160,7 +165,8 @@ fieldset input[type="text"]{
 }
 
 fieldset input[type="email"]{
-    width: 50%;
+  text-align: center;
+    width: 83%;
     margin: 15px 0;
     padding: 5px 10px;
     border-radius: 15px;
@@ -169,13 +175,17 @@ fieldset input[type="email"]{
 
 /*********** RADIOS BUTTON   ***************/
 .negrita-radio{
-    width: 60%;
+    width: 90%;
     font-weight: bold;
+}
+.negrita-radio label{
+  margin-right: 100px;
 }
 
 /******  BOTON EEDITAR  *******/
 fieldset input[type="submit"]{
     margin: 0 10%;
+    width: 86%;
     padding: 5px  180px;
     border-radius: 5px;
     border: none;

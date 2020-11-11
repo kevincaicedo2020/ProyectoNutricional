@@ -5,9 +5,10 @@ body{
     clear: both;
     width: 100%;
     overflow-x: hidden;
-    background-image: url(../Img/frutasfondo.jpg);
-    background-position: center;
+    background-image: url(../Img/comida_copia.jpg);
+    background-position: right;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ul {
@@ -125,12 +126,19 @@ a:hover {
 }
 
 .container{
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    justify-content: center;
     width: 45%;
     margin-top: 2%;
     border-radius: 10px;
     background: #75747477;
     margin: 8px;
 }      
+.container h1{
+    color: #ffffff;
+}
 .imc-title h1{
     text-align: center;
 }
@@ -164,6 +172,7 @@ input[type="number"]{
 /**************************    TABLA DE IMC DATOS   ***************************************/
 
 .tab-peso{
+    height: 65vh;
     width: 50%;
     margin: 25px auto;
     background: #75747477;
@@ -179,6 +188,8 @@ input[type="number"]{
 }
 
 .tab-datos tr td{
+    height: 37px;
+    color: #ffffff;
     padding: 5px 0;
     text-align: center;
     font-family: 'Belleza', sans-serif;
@@ -186,15 +197,21 @@ input[type="number"]{
 }
 
 
+
 /**************************   IMC texto  ************************************/
 .elimc{
-    width: 45%;
-    margin: 0 10px;
+    width: 98%;
     border-radius: 10px;
     font-family: 'Belleza', sans-serif;
     background: #7e7e7eab;
 }
+.elimc p{
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+}
 .elimc h3{
+    color: #ffffff;
     text-align: center;
     font-family: 'Belleza', sans-serif;
 }
@@ -207,7 +224,7 @@ input[type="number"]{
 /*****************  CALCULADORA DE PROTEINAS DIARIAS  ****************************/
 .proteinas{
     clear: both;
-    width: 40%;
+    width: 60%;
     float: right;
     margin: 90px 15%;
     border-radius: 20px;
@@ -215,14 +232,16 @@ input[type="number"]{
 }  
 
 .proteinas h2{
+    font-size: 2rem;
+    
     text-align: center;
     font-family: 'Belleza', sans-serif;
 }
 
 .contenedor-proteinas{
     width: 70%;
-    margin: 5px;
-    padding: 25px;
+    margin: auto;
+    padding: 85px 0 85px 0;
     font-family: 'Lato', sans-serif;
 }
 

@@ -1,3 +1,15 @@
+
+<?php
+session_start();
+if( !empty($_SESSION['IDnutricionista']) ):
+    header('location: registro.php');
+    die();
+elseif( !empty($_SESSION['IDpaciente']) ):
+    header('location: /ProyectoNutricional/Vista/Html/panelpaciente.php');
+    die();
+else:
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +62,7 @@
             <div class="submit">
                 <input type="submit" class="input_submit" name="login" value="RECIBIR GMAIL">
             </div>
-            <a href="login.html" id="olvidarContraseña">Ingresar a la cuenta</a>
+            <a href="login.php" id="olvidarContraseña">Ingresar a la cuenta</a>
             
         </form>
     </div>
@@ -59,3 +71,6 @@
     
 </body>
 </html>
+<?php
+endif;
+?>

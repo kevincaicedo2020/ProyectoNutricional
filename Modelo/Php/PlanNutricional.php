@@ -1,6 +1,10 @@
 <?php
 namespace Modelo\Php;
+use Modelo\Php\BD_Nutricion;
+use Modelo\Php\BD_Plan_nutricional;
 class PlanNutricional{
+    use \Modelo\Php\BD_Plan_nutricional;
+    use \Modelo\Php\BD_Nutricion;
     public $actividadDiaria = 0;
     public $caloriaDiaria = 0;
     public $proteinaDiaria = 0;
@@ -11,7 +15,7 @@ class PlanNutricional{
     public $caloriaDeCarbohidrato = 0;
     public $IMC = 0;
 
-    function __construct(float $actividadDiaria, float $caloriaDiaria, float $proteinaDiaria, float $grasaDiaria, float $carbohidratoDiaria, 
+    function __construct(string $actividadDiaria, float $caloriaDiaria, float $proteinaDiaria, float $grasaDiaria, float $carbohidratoDiaria, 
     float $caloriaDeProteina, float $caloriaDeGrasa, float $caloriaDeCarbohidrato, float $IMC)
     {
         $this->actividadDiaria = $actividadDiaria;

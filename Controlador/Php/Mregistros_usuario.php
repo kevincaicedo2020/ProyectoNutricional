@@ -21,7 +21,7 @@ use Modelo\Php\Nutricionista;
             $conexion = $INSpaciente->conexion_a_la_BD();
             $INSpaciente->validarDatos($paciente);
             $INSpaciente->enviar_correo_restablecer_contraseña($email);
-            $resultado = mysqli_query($conexion,$INSpaciente->consulta_para_insertar_usuarios($paciente));
+            $resultado = mysqli_query($conexion,$INSpaciente->consulta_para_insertar_usuarios($paciente));      
             $INSpaciente->ver_si_conexion_BD_fue_exitosa($resultado,"registro.php");
             $INSpaciente->cerrar_a_la_BD($resultado,$conexion);
             //me faltaria saber si 

@@ -7,10 +7,6 @@ use Modelo\Php\PHPMailer\SMTP;
 trait BD_Nutricion{
     public $conexion;
     public $consulta = "";
-    
-    public function saludar(){
-        echo 'hola';
-    }
 
     public function conexion_a_la_BD(){
         $this->conexion = mysqli_connect('localhost','kevin','kevinroot','nutricion');
@@ -24,10 +20,10 @@ trait BD_Nutricion{
 
     public function validarDatos(string $tipoUsuario){
 
-        if(isset($tipoUsuario) && !empty($tipoUsuario)){
+        if(isset($tipoUsuario) && !empty($tipoUsuario) && ($tipoUsuario!=="Buscar")){
             global $cedula,$nombre,$edad,$sexo,$telefono,$email;
 
-            if((strlen(trim($cedula))==10) && (strlen(trim($nombre))>0) && (strlen(trim($edad))>0) && (strlen(trim($sexo))>0) && (strlen(trim($telefono))>=9) && (strlen(trim($email))>0) && is_numeric($cedula) && is_string($nombre) && is_numeric($edad) && is_string($sexo) && is_numeric($telefono) && is_string($email))
+            if((strlen(trim($cedula))==10) && (strlen(trim($nombre))>0) && (strlen(trim($edad))>0) && (strlen(trim($sexo))>0) && (strlen(trim($telefono))==9) && (strlen(trim($email))>0) && is_numeric($cedula) && is_string($nombre) && is_numeric($edad) && is_string($sexo) && is_numeric($telefono) && is_string($email))
             {                
                 //en esto ya estaria validado los datos de Nutricionista
 
@@ -45,7 +41,17 @@ trait BD_Nutricion{
                 header('location: ../../Vista/Html/registro.php');
                 die();
             }
-        }else{
+        }elseif(!empty($tipoUsuario) && ($tipoUsuario=="Buscar")){
+            global $IDbuscador;
+            if( (strlen(trim($IDbuscador))==10) ){
+                //en esto ya estaria validado la cedula al momento de buscar un usuario
+                return true;
+            }else{
+                header('location: ../../Vista/Html/editarDatos.php');
+                die();
+            }
+        }
+        else{
             header('location: ../../Vista/Html/registro.php');
             die();
         }
@@ -125,6 +131,39 @@ trait BD_Nutricion{
         }
         return $this->consulta;
     }
+    public function consulta_para_modificar_usuarios(string $tipoUsuario){
+        if($tipoUsuario == "ENVIAR DATOS DE PACIENTE"){
+            global $cedula, $nombre, $edad, $sexo, $telefono, $email, $peso, $estatura;
+            session_start();
+            // AQUI AL MOMENTO EN QUE EL NUTRICIONISTA SE LOGEA DEBO AGREGAR SU ID EN UNA VARIABLE SESION PARA PONER SU ID EN EL '1' DE LA LINEA 50
+            $this->consulta='update paciente set DNIpaciente='.$cedula.', nombrePaciente="'.$nombre.'", edadPaciente='.$edad.', sexoPaciente="'.$sexo.'", telefonoPaciente='.$telefono.', emailPaciente="'.$email.'", pesoPaciente='.$peso.', estaturaPaciente='.$estatura.' where DNIpaciente='.$_SESSION['modificarCedula'].' and emailPaciente="'.$_SESSION['modificarEmail'].'" ; ';
+
+        }elseif($tipoUsuario == "ENVIAR DATOS DE NUTRICIONISTA"){
+            global $cedula,$nombre,$edad,$sexo,$telefono,$email;
+            $this->consulta='update nutricionista set DNInutricionista='.$cedula.', nombreNutricionista="'.$nombre.'", edadNutricionista='.$edad.', sexoNutricionista="'.$sexo.'", telefonoNutricionista='.$telefono.', emailNutricionista="'.$email.'" where DNInutricionista='.$_SESSION['modificarCedula'].' and emailNutricionista="'.$_SESSION['modificarEmail'].'"  ';
+        }
+        return $this->consulta;
+    }
+    public function eliminar_variables_session(){
+        session_start();
+        unset($_SESSION['modificarCedula']);
+        unset($_SESSION['modificarNombre']);
+        unset($_SESSION['modificarEdad']);
+        unset($_SESSION['modificarSexo']);
+        unset($_SESSION['modificarTelefono']);
+        unset($_SESSION['modificarEmail']);
+        unset($_SESSION['modificarPeso']);
+        unset($_SESSION['modificarEstatura']);
+    }
+    public function eliminar_variables_nutricion(){
+        session_start();
+        unset($_SESSION['caloria_total']);
+        unset($_SESSION['proteina_total']);
+        unset($_SESSION['grasa_total']);
+        unset($_SESSION['carbohidrato_total']);
+        unset($_SESSION['IMC']);
+        unset($_SESSION['nombrepaciente']);
+    }
 
     public function ver_si_conexion_BD_fue_exitosa(bool $resultado, string $direccion){
         if($resultado){
@@ -139,6 +178,42 @@ trait BD_Nutricion{
             die();                          
         }
     }
+//EL VALOR OPCIONAL SI ES CERO ES PARA LA PAGINA editarDatos PERO SI ES UNO ES PARA LA PAGINA asignacionPlanNutricional
+    public function verificar_num_de_cedula_ver_que_tipo_es($cedula,$opcional){
+        $conexioon = $this->conexion_a_la_BD();
+        
+        $resultado1 = mysqli_query($conexioon,'select * from paciente where DNIpaciente="'.$cedula.'";');
+        $resultado2 = mysqli_query($conexioon,'select * from nutricionista where DNInutricionista="'.$cedula.'";');
+
+        if(mysqli_num_rows($resultado1)==mysqli_num_rows($resultado2)){
+            header('location: ../../Vista/Html/editarDatos.php');
+            $this->cerrar_a_la_BD($resultado1,$conexioon);
+            $this->cerrar_a_la_BD($resultado2,$conexioon);
+            die();
+        }
+        elseif(mysqli_num_rows($resultado1) && ($opcional==0)){
+          return $datos = mysqli_fetch_assoc($resultado1);
+          $this->cerrar_a_la_BD($resultado1,$conexioon);
+            $this->cerrar_a_la_BD($resultado2,$conexioon);
+        }elseif(mysqli_num_rows($resultado2) && ($opcional==0)){
+          return $datos = mysqli_fetch_assoc($resultado2);
+            $this->cerrar_a_la_BD($resultado1,$conexioon);
+            $this->cerrar_a_la_BD($resultado2,$conexioon);
+        }elseif(mysqli_num_rows($resultado1) && ($opcional==1)){
+            return $datos = mysqli_fetch_assoc($resultado1);
+            $this->cerrar_a_la_BD($resultado1,$conexioon);
+            $this->cerrar_a_la_BD($resultado2,$conexioon);
+        }elseif(mysqli_num_rows($resultado2) && ($opcional==1)){
+            header('location: ../../Vista/Html/asignacionPlanNutricional.php');
+            $this->cerrar_a_la_BD($resultado1,$conexioon);
+            $this->cerrar_a_la_BD($resultado2,$conexioon);
+            die();
+        }
+        
+     
+    }
+
+    
 
 }
 

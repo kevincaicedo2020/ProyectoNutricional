@@ -2,9 +2,11 @@
 namespace Modelo\Php;
 use Modelo\Php\Usuario;
 use Modelo\Php\BD_Nutricion;
+use Modelo\Php\BD_Plan_nutricional;
 
 class Paciente extends Usuario{
     use \Modelo\Php\BD_Nutricion;
+    use \Modelo\Php\BD_Plan_nutricional;
     public $pesoKg = 0;
     public $alturaM = 0;
     private $contraseña =""; 
