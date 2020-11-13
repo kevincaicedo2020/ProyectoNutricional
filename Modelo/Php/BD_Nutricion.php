@@ -118,6 +118,41 @@ trait BD_Nutricion{
         }
     }
 
+
+
+    public function enviar_correo_contacto(string $nombre, string $email, string $telefono, string $mensaje){
+        $mail = new PHPMailer(true);
+        try {
+            //Server settings
+            $mail->SMTPDebug = 0;                   // Enable verbose debug output  (  SMTP::DEBUG_SERVER;    )
+            $mail->isSMTP();                                            // Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+            $mail->Username   = 'nutricionbuenvivir@gmail.com';                     // SMTP username
+            $mail->Password   = 'Lanutricionesbeneficiosa';                               // SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+            $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+            //Recipients
+            $mail->setFrom(''.$email.'', $email);
+            $mail->addAddress('nutricionbuenvivir@gmail.com');     // Add a recipient
+
+            // Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject = 'Solicitud de cita';
+            $mail->Body    = 'Nombre:'.$nombre.'<br> Correo: '.$email.' <br> Telefono: '.$telefono.' <br> <br> Solicitud: '.$mensaje;
+            
+
+            $mail->send();
+            //echo 'Se envio Correctamente';
+        } catch (Exception $e) {
+            echo "Error el mensaje no se ha enviado: {$mail->ErrorInfo}";
+        }
+    }
+
+
+    
+
     public function consulta_para_insertar_usuarios(string $tipoUsuario){
         if($tipoUsuario == "ENVIAR DATOS DE PACIENTE"){
             session_start();
@@ -144,8 +179,22 @@ trait BD_Nutricion{
         }
         return $this->consulta;
     }
+    public function consulta_para_eliminar_usuarios(string $tipoUsuario){
+        if($tipoUsuario == "ENVIAR DATOS DE PACIENTE"){
+            global $cedula, $nombre, $edad, $sexo, $telefono, $email, $peso, $estatura;
+            session_start();
+            $this->consulta='delete from paciente where IDpaciente='.$_SESSION['modificarID'].';';
+
+        }elseif($tipoUsuario == "ENVIAR DATOS DE NUTRICIONISTA"){
+            global $cedula,$nombre,$edad,$sexo,$telefono,$email;
+            session_start();
+            $this->consulta='delete from nutricionista where IDnutricionista='.$_SESSION['modificarID'].';';
+        }
+        return $this->consulta;
+    }
     public function eliminar_variables_session(){
         session_start();
+        unset($_SESSION['modificarID']);
         unset($_SESSION['modificarCedula']);
         unset($_SESSION['modificarNombre']);
         unset($_SESSION['modificarEdad']);

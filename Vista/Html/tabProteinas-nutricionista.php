@@ -38,6 +38,8 @@ if( !empty($_SESSION['IDnutricionista']) ):
                                 <li> <i class="fas fa-2x fa-male"> </i> Registro de nuevo Usuario</li></a>
                             <a href="editarDatos.php">
                                 <li> <i class="fas fa-2x fa-user-edit"></i> Editar datos de Usuario</li></a>
+                                <a href="listadoUsuarios.php">
+                                <li> <i class="fas fa-th-list"></i> Listado de Usuarios</li></a>
                             <a href="asignacionPlanNutricional.php">
                                 <li> <i class="far fa-2x fa-clipboard"> </i> Crear Plan Nutricional</li></a>
                             <a href="tabProteinas-nutricionista.php">

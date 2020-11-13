@@ -4,7 +4,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-
+    background-attachment: fixed;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -108,8 +108,8 @@ a {
 
   /******************    PARTE DEL LOS DATOS A EDITAR       **************/
 .contenedor-global{
-    width: 60%;
-    margin-right: 110px;
+    width: 55%;
+    margin-right: 20px;
     margin-bottom: 5px;       
     padding: 15px;
     border-radius: 15px;
@@ -141,11 +141,10 @@ a {
 
 /********* DATOS DENTRO DEL FILESET   *************/
 .informacion-editar{
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 5px 8px;
 }
-
 fieldset input[type="number"]{
   text-align: center;
     width: 83%;
@@ -184,9 +183,8 @@ fieldset input[type="email"]{
 
 /******  BOTON EEDITAR  *******/
 fieldset input[type="submit"]{
-    margin: 0 10%;
-    width: 86%;
-    padding: 5px  180px;
+    width: 45%;
+    padding: 5px  120px;
     border-radius: 5px;
     border: none;
     background: #2AC10F;
@@ -232,4 +230,66 @@ fieldset #peso{
 
 fieldset #altura{
     margin-left: 10px;
+}
+
+/*LISTADO USUARIOS*/
+.contenedor-grid-listado-usuario{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(5fr);
+  margin: 40px 10px auto 0;
+  width: 74%;
+}
+.texto_usuario{
+  grid-row: auto;
+  font-weight: bold;
+  color: #ffffff;
+  border-radius: 10px 10px 0 0;
+  font-size: 25px;
+  text-align: center;
+  grid-row: auto;
+  grid-column: 1/6;
+  background-color: rgba(210, 15, 50,0.9);
+}
+.text034{
+width: 87%;
+}
+.num_cedula{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 29px;
+  color: #ffffff;
+  grid-column: 1 / 2;
+  grid-row: auto;
+  border-radius: 10px 5px 5px  10px;
+  padding: 10px;
+  background-color: rgba(114, 71, 78,0.7);
+  text-shadow: 1px 1px 5px black;
+}
+.con_datos_pacientes{
+  color: #ffffff;
+  border-radius: 10px;
+  
+  grid-column: 2 / 6;
+  grid-row: auto;
+  background-color: rgba(114, 71, 78,0.7);
+  text-shadow: 1px 1px 5px black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.con_datos_pacientes p{
+  margin-right: 50px;
+}
+
+.valores_input{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.boton-submit-modificar-eliminar{
+  width: 50%;
+  margin: 0;
+  padding: 0;
 }

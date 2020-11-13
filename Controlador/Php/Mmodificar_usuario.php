@@ -14,6 +14,7 @@ if( isset($_POST['Buscador']) ){
     if($INSnutricionista->validarDatos($buscar)){
         $datos = $INSnutricionista->verificar_num_de_cedula_ver_que_tipo_es($IDbuscador,0);
         if( isset($datos['estaturaPaciente']) ){
+            $_SESSION['modificarID'] = $datos['IDpaciente'];
             $_SESSION['modificarCedula'] = $datos['DNIpaciente'];
             $_SESSION['modificarNombre'] = $datos['nombrePaciente'];
             $_SESSION['modificarEdad'] = $datos['edadPaciente'];
@@ -24,6 +25,7 @@ if( isset($_POST['Buscador']) ){
             $_SESSION['modificarEstatura'] = $datos['estaturaPaciente'];
             header('location: ../../Vista/Html/editarDatos.php');
         }else{
+            $_SESSION['modificarID'] = $datos['IDnutricionista'];
             $_SESSION['modificarCedula'] = $datos['DNInutricionista'];
             $_SESSION['modificarNombre'] = $datos['nombreNutricionista'];
             $_SESSION['modificarEdad'] = $datos['edadNutricionista'];
@@ -51,7 +53,11 @@ if( isset($_POST['Buscador']) ){
         $INSpaciente1 = new Paciente($cedula,$nombre,$edad,$sexo,$telefono,$email,$peso,$estatura);
         $conexion = $INSpaciente1->conexion_a_la_BD();
         $INSpaciente1->validarDatos($tipoUsuario);
-        $resultado = mysqli_query($conexion,$INSpaciente1->consulta_para_modificar_usuarios($tipoUsuario));
+        if($_POST['modificar']=="Editar"){
+            $resultado = mysqli_query($conexion,$INSpaciente1->consulta_para_modificar_usuarios($tipoUsuario));
+        }elseif($_POST['modificar']=="Eliminar"){
+            $resultado = mysqli_query($conexion,$INSpaciente1->consulta_para_eliminar_usuarios($tipoUsuario));
+        }
         $INSpaciente1->eliminar_variables_session();
         $INSpaciente1->ver_si_conexion_BD_fue_exitosa($resultado,"editarDatos.php");
         $INSpaciente1->cerrar_a_la_BD($resultado,$conexion);
@@ -61,7 +67,11 @@ if( isset($_POST['Buscador']) ){
         $INSnutricionista1 = new Nutricionista($cedula,$nombre,$edad,$sexo,$telefono,$email);
         $conexion = $INSnutricionista1->conexion_a_la_BD();
         $INSnutricionista1->validarDatos($tipoUsuario);
-        $resultado = mysqli_query($conexion,$INSnutricionista1->consulta_para_modificar_usuarios($tipoUsuario));
+        if($_POST['modificar']=="Editar"){
+            $resultado = mysqli_query($conexion,$INSnutricionista1->consulta_para_modificar_usuarios($tipoUsuario));
+        }elseif($_POST['modificar']=="Eliminar"){
+            $resultado = mysqli_query($conexion,$INSnutricionista1->consulta_para_eliminar_usuarios($tipoUsuario));
+        }
         $INSnutricionista1->eliminar_variables_session();
         $INSnutricionista1->ver_si_conexion_BD_fue_exitosa($resultado,"editarDatos.php");
         $INSnutricionista1->cerrar_a_la_BD($resultado,$conexion);

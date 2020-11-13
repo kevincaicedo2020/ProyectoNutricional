@@ -35,6 +35,8 @@ if( !empty($_SESSION['IDnutricionista']) ):
                                 <li> <i class="fas fa-2x fa-male"> </i> Registro de nuevo Usuario</li></a>
                             <a href="editarDatos.php">
                                 <li> <i class="fas fa-2x fa-user-edit"></i> Editar datos de Usuario</li></a>
+                                <a href="listadoUsuarios.php">
+                                <li> <i class="fas fa-th-list"></i> Listado de Usuarios</li></a>
                             <a href="asignacionPlanNutricional.php">
                                 <li> <i class="far fa-2x fa-clipboard"> </i> Crear Plan Nutricional</li></a>
                             <a href="tabProteinas-nutricionista.php">
@@ -103,28 +105,28 @@ if( !empty($_SESSION['IDnutricionista']) ):
                     <td id="caloria">Calorias Diarias</td>
                     <td> <!--<input type="text" id="paciente-caloriasD" />--> <label id="paciente-caloriasD"><?php 
                     if(isset($_SESSION['caloria_total'])){
-                        echo $_SESSION['caloria_total'];
+                        echo $_SESSION['caloria_total'].' Cal';
                         }?></label></td>
                 </tr>
                 <tr>
                     <td>Proteinas Diarias</td>
                     <td> <!--<input type="text" id="paciente-proteinasD" /> --><label id="paciente-proteinasD"><?php 
                     if(isset($_SESSION['proteina_total'])){
-                        echo $_SESSION['proteina_total'];
+                        echo $_SESSION['proteina_total'].'g';
                         }?></td>
                 </tr>
                 <tr>
                     <td>Grasa Diarias</td>
                     <td><!-- <input type="text" id="paciente-grasaD" />--> <label id="paciente-grasaD"><?php 
                     if(isset($_SESSION['grasa_total'])){
-                        echo $_SESSION['grasa_total'];
+                        echo $_SESSION['grasa_total'].'g';
                         }?></td>
                 </tr>
                 <tr>
                     <td>Carboidrato Diario</td>
                     <td> <!--<input type="text" id="paciente-carboidratosD" />--> <label id="paciente-carboidratosD"><?php 
                     if(isset($_SESSION['carbohidrato_total'])){
-                        echo $_SESSION['carbohidrato_total'];
+                        echo $_SESSION['carbohidrato_total'].'g';
                         }?></td>
                 </tr>
                 <tr>

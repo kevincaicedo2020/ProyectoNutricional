@@ -37,20 +37,20 @@
                 <div class="seccion-divisor"></div>
             </div>
             <div class="contenedor-grid contenedor">
-                <form class="reserva-contacto" action="" method="POST">
+                <form class="reserva-contacto" action="../../Controlador/Php/Mregistros_usuario.php" method="POST">
                     <div class="campo">
-                        <input type="text" name="nombre" placeholder="Tu nombre" required>
+                        <input type="text" name="nombre_solicitud" placeholder="Tu nombre" pattern="[A-Za-z]+" required>
                     </div>
                     <div class="campo">
-                        <input type="email" name="email" placeholder="Tu email" required>
+                        <input type="email" name="email_solicitud" placeholder="Tu email" required>
                     </div>
                     <div class="campo">
-                        <input type="tel" name="telefono" placeholder="Tu telefono" maxlength="10" required>
+                        <input type="tel" name="telefono_solicitud" placeholder="Tu telefono" maxlength="10" pattern="[0-9]+" required>
                     </div>
                     <div class="campo">
-                        <textarea type="mensaje" name="mensaje" placeholder="Tu mensaje" required cols="30" rows="10"></textarea>
+                        <textarea type="mensaje" name="mensaje_solicitud" placeholder="Tu mensaje" pattern="[A-Za-z]+" required cols="30" rows="10"></textarea>
                     </div>
-                    <input type="submit" name="enviar" value="Enviar" class="button">
+                    <input type="submit" name="enviar" value="Solicitar" class="button">
                 </form>
             </div>
         </section>

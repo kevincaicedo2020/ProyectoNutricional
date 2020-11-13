@@ -33,6 +33,8 @@ if( !empty($_SESSION['IDnutricionista']) ):
                                 <li> <i class="fas fa-2x fa-male"> </i> Registro de nuevo Usuario</li></a>
                             <a href="editarDatos.php">
                                 <li> <i class="fas fa-2x fa-user-edit"></i> Editar datos de Usuario</li></a>
+                                <a href="listadoUsuarios.php">
+                                <li> <i class="fas fa-th-list"></i> Listado de Usuarios</li></a>
                             <a href="asignacionPlanNutricional.php">
                                 <li> <i class="far fa-2x fa-clipboard"> </i> Crear Plan Nutricional</li></a>
                             <a href="tabProteinas-nutricionista.php">
@@ -47,8 +49,8 @@ if( !empty($_SESSION['IDnutricionista']) ):
                         </ul>
                     </div>
                 </nav>
-
-<section class="contenedor-global">
+ 
+                <section class="contenedor-global">
 <form action="../../Controlador/Php/Mmodificar_usuario.php" method="POST">
     <div class="buscar-usuario">
         <label for="buscar">Buscar Paciente:</label>
@@ -56,7 +58,7 @@ if( !empty($_SESSION['IDnutricionista']) ):
         <input type="submit" id="buscar-dato" name="Buscador" value="Buscar">
     </div>
 </form>
-<form action="../../Controlador/Php/Mmodificar_usuario.php" method="POST">
+<form action="../../Controlador/Php/Mmodificar_usuario.php" class="formulario-editar-usuario" method="POST">
     <div class="informacion-editar">
         <fieldset>
             <legend> Informacion </legend>
@@ -141,13 +143,17 @@ if( !empty($_SESSION['IDnutricionista']) ):
                 echo 'disabled';
             }
             ?> required> <br>
-
-            <input type="submit" name="modificar" value="Editar">
-
+            <div class="valores_input">
+                        <input type="submit" class="boton-submit-modificar-eliminar" name="modificar" value="Eliminar">
+                        <input type="submit" class="boton-submit-modificar-eliminar" name="modificar" value="Editar">
+            </div>
         </fieldset>
     </div>
 </form>
 </section>
+
+</div>
+  
 
 
 </body>

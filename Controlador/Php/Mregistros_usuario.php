@@ -11,6 +11,7 @@ use Modelo\Php\Nutricionista;
     $sexo = (string) $_POST['sexo'];
     $telefono = (int) $_POST['telefono'];
     $email = (string) $_POST['email'];
+    $solicitar_cita = (string) $_POST['enviar'];
     
     
         if(isset($_POST['paciente'])){
@@ -39,6 +40,13 @@ use Modelo\Php\Nutricionista;
             $INSnutricionista->ver_si_conexion_BD_fue_exitosa($resultado,"registro.php");
             $INSnutricionista->cerrar_a_la_BD($resultado,$conexion);
             
+        }elseif(isset($_POST['enviar'])){
+            $nombre_solicitud = (string) $_POST['nombre_solicitud'];
+            $email_solicitud = (string) $_POST['email_solicitud'];
+            $telefono_solicitud = (string) $_POST['telefono_solicitud'];
+            $mensaje_solicitud = (string) $_POST['mensaje_solicitud'];
+            Nutricionista::enviar_correo_contacto($nombre_solicitud, $email_solicitud, $telefono_solicitud, $mensaje_solicitud);
+            header('location: ../../Vista/Html/contacto.html');
         }
        
 
